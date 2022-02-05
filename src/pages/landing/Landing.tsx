@@ -13,7 +13,7 @@ export const Landing: FC = () => {
             <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                 <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                     <Stack spacing="8">
-                        <Heading fontSize={{ base: "6xl", md: "7xl" }} lineHeight={1}>
+                        <Heading fontSize={{ base: "5xl", md: "7xl" }} lineHeight={1}>
                             {configs.landing.headline}
                         </Heading>
                         <Content fontSize="lg">{content.landing}</Content>

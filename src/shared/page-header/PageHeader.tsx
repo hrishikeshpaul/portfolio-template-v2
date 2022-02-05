@@ -2,8 +2,11 @@ import { FC } from "react";
 
 import { Box, Text } from "@chakra-ui/react";
 
-export const PageHeader: FC = () => {
-    const borderColor = "gray.400";
+interface Props {
+    label: string;
+}
+export const PageHeader: FC<Props> = ({ label }) => {
+    const borderColor = "gray.500";
     return (
         <Box
             _before={{
@@ -19,7 +22,7 @@ export const PageHeader: FC = () => {
             fontSize="xl"
         >
             <Text as="span" color={borderColor} fontWeight="700">
-                Hello
+                {label}
             </Text>
         </Box>
     );

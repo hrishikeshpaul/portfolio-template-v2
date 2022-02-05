@@ -1,6 +1,7 @@
 import { FC } from "react";
 
-import { Badge, Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 
 interface Props {
     id: string;
@@ -40,11 +41,16 @@ export const FeaturedProjectCard: FC<Props> = ({
                     <Text fontSize="sm" fontWeight="700" opacity="0.5" as="span">
                         {year}
                     </Text>
-                    <Heading pt="1">{title}</Heading>
-                    <Text fontSize="lg" py="4">
+                    <Flex justifyContent="space-between" alignItems="center">
+                        <Heading pt="1">{title}</Heading>
+                        <Button variant="link" leftIcon={<LinkIcon fontSize="16pt" />}>
+                            Live Demo
+                        </Button>
+                    </Flex>
+                    <Text fontSize="lg" pt="4">
                         {description}
                     </Text>
-                    <Flex pb="4" wrap="wrap" gap="4">
+                    <Flex py="3" wrap="wrap" gap="4">
                         {tags.map((tag) => (
                             <Badge
                                 textTransform="capitalize"
@@ -61,12 +67,17 @@ export const FeaturedProjectCard: FC<Props> = ({
                         ))}
                     </Flex>
                 </Box>
-                <Box fontWeight="700" opacity="0.5" as="span">
-                    Read more
-                </Box>
+                <Flex justifyContent="space-between">
+                    <Button variant="link" colorScheme="black" rightIcon={<ArrowRightIcon fontSize="16pt" />}>
+                        Read More
+                    </Button>
+                    <Button variant="link" leftIcon={<GitHubIcon />}>
+                        GitHub
+                    </Button>
+                </Flex>
             </Flex>
 
-            <Box flex={{ base: 1, lg: 0.6 }} pl={{ base: "0", lg: "8" }} pt={{ base: "8", lg: "0" }}>
+            <Box flex={{ base: 1, lg: 0.7 }} pl={{ base: "0", lg: "8" }} pt={{ base: "8", lg: "0" }}>
                 <Image borderRadius="xl" src={image} />
             </Box>
         </Flex>

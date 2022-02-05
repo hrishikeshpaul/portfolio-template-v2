@@ -12,8 +12,15 @@ const ContainerStyles: ComponentStyleConfig = {
     },
 };
 
+const ButtonStyles: ComponentStyleConfig = {
+    baseStyle: {
+        fontWeight: "bold",
+    },
+};
+
 export const components = {
     Text: { ...TextStyles },
     Container: { ...ContainerStyles },
     Link: { ...TextStyles },
+    Button: { ...ButtonStyles },
 };

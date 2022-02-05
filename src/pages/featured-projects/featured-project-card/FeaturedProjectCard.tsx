@@ -7,12 +7,12 @@ interface Props {
     id: string;
     title: string;
     year: string;
-    type: string;
-    live: string;
-    github: string;
+    type?: string;
+    demo?: string;
+    github?: string;
     tags: string[];
     description: string;
-    blog: string;
+    readMore?: string;
     image: string;
 }
 
@@ -21,36 +21,55 @@ export const FeaturedProjectCard: FC<Props> = ({
     title,
     year,
     type,
-    live,
+    demo,
     github,
     tags,
     description,
-    blog,
+    readMore,
     image,
 }) => {
+    const onLinkPress = (link: string) => {
+        window.open(link, "_blank");
+    };
+
     return (
-        <Flex justifyContent="space-between" id="featured-project-card" direction={{ base: "column", lg: "row" }}>
+        <Flex
+            justifyContent="space-between"
+            id="featured-project-card"
+            direction={{ base: "column-reverse", lg: "row" }}
+        >
             <Flex
                 h="auto"
-                pr={{ base: "8", lg: "0" }}
+                pr={{ base: "0", lg: "8" }}
                 direction="column"
                 justifyContent="space-between"
                 flex={{ base: 1, lg: 0.6 }}
             >
                 <Box>
-                    <Text fontSize="sm" fontWeight="700" opacity="0.5" as="span">
-                        {year}
-                    </Text>
                     <Flex justifyContent="space-between" alignItems="center">
-                        <Heading pt="1">{title}</Heading>
-                        <Button variant="link" leftIcon={<LinkIcon fontSize="16pt" />}>
-                            Live Demo
-                        </Button>
+                        <Text fontSize="sm" fontWeight="700" opacity="0.5" as="span">
+                            {year}
+                        </Text>
+                        {demo && (
+                            <Button
+                                variant="link"
+                                leftIcon={<LinkIcon fontSize="14pt" />}
+                                onClick={() => onLinkPress(demo)}
+                            >
+                                Live Demo
+                            </Button>
+                        )}
                     </Flex>
-                    <Text fontSize="lg" pt="4">
+                    <Heading>{title}</Heading>
+
+                    <Box py="4" display={{ base: "block", lg: "none" }}>
+                        <Image borderRadius="xl" src={image} />
+                    </Box>
+
+                    <Text fontSize="lg" pt="3">
                         {description}
                     </Text>
-                    <Flex py="3" wrap="wrap" gap="4">
+                    <Flex py="2" wrap="wrap" gap="4">
                         {tags.map((tag) => (
                             <Badge
                                 textTransform="capitalize"
@@ -59,7 +78,7 @@ export const FeaturedProjectCard: FC<Props> = ({
                                 borderRadius="md"
                                 px="8px"
                                 py="4px"
-                                fontSize="md"
+                                fontSize="sm"
                                 fontWeight="600"
                             >
                                 {tag}
@@ -67,17 +86,26 @@ export const FeaturedProjectCard: FC<Props> = ({
                         ))}
                     </Flex>
                 </Box>
-                <Flex justifyContent="space-between">
-                    <Button variant="link" colorScheme="black" rightIcon={<ArrowRightIcon fontSize="16pt" />}>
-                        Read More
-                    </Button>
-                    <Button variant="link" leftIcon={<GitHubIcon />}>
-                        GitHub
-                    </Button>
+                <Flex justifyContent="space-between" pt="4">
+                    {readMore && (
+                        <Button
+                            variant="link"
+                            colorScheme="black"
+                            rightIcon={<ArrowRightIcon fontSize="16pt" />}
+                            onClick={() => onLinkPress(readMore)}
+                        >
+                            Read More
+                        </Button>
+                    )}
+                    {github && (
+                        <Button variant="link" leftIcon={<GitHubIcon />} onClick={() => onLinkPress(github)}>
+                            GitHub
+                        </Button>
+                    )}
                 </Flex>
             </Flex>
 
-            <Box flex={{ base: 1, lg: 0.7 }} pl={{ base: "0", lg: "8" }} pt={{ base: "8", lg: "0" }}>
+            <Box display={{ base: "none", lg: "block" }} flex={{ base: 1, lg: 0.7 }} pl={{ base: "0", lg: "8" }}>
                 <Image borderRadius="xl" src={image} />
             </Box>
         </Flex>

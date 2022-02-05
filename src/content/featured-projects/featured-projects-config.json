@@ -2,13 +2,13 @@
     {
         "id": "featured-project-asctb-reporter",
         "title": "ASCT+B Reporter",
-        "year": "2020 - 2021",
+        "year": "Jun 2020 - Jun 2021",
         "type": "Project",
-        "live": "",
-        "github": "",
+        "demo": "https://hubmapconsortium.github.io/ccf-asct-reporter/",
+        "github": "https://github.com/hrishikeshpaul/ccf-asct-reporter",
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
         "description": "A powerful visualization tool to envision large biomedical datasets for researchers, doctors and various subject matter experts.",
-        "blog": "",
+        "readMore": "https://iampaul.web.app/projects/asctb-reporter",
         "image": "/assets/featured-projects/asctb.png"
     }
 ]

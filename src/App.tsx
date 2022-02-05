@@ -8,6 +8,7 @@ import { NavbarHeight } from "theme";
 
 import "./App.scss";
 import { PageHeader } from "shared/page-header/PageHeader";
+import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 
 export const App: FC = () => {
     return (
@@ -16,6 +17,7 @@ export const App: FC = () => {
             <Box mt={NavbarHeight} h="100%">
                 <Landing />
                 <PageHeader label="Featured Projects" />
+                <FeaturedProjects />
             </Box>
         </Container>
     );

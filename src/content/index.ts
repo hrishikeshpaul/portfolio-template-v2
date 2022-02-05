@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 import common from "content/common/common.json";
 import landing from "content/landing/landing-config.json";
+import featuredProjects from "content/featured-projects/featured-projects-config.json";
 
 import LandingMd from "content/landing/landing.md";
 
 export const configs = {
     common,
     landing,
+    featuredProjects,
 };
 
 interface State {

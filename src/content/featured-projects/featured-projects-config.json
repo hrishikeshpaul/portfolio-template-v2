@@ -1,0 +1,14 @@
+[
+    {
+        "id": "featured-project-asctb-reporter",
+        "title": "ASCT+B Reporter",
+        "year": "2020 - 2021",
+        "type": "Project",
+        "live": "",
+        "github": "",
+        "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
+        "description": "A powerful visualization tool to envision large biomedical datasets for researchers, doctors and various subject matter experts.",
+        "blog": "",
+        "image": "/assets/featured-projects/asctb.png"
+    }
+]

@@ -9,7 +9,7 @@ export const Landing: FC = () => {
     const content = useContent(ContentFile.Landing);
 
     return (
-        <Center h="100%" w="100%" px={{ base: 0, md: 16, lg: 0 }}>
+        <Center py="32" px={{ base: 0, md: 16, lg: 0 }}>
             <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                 <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                     <Stack spacing="8">

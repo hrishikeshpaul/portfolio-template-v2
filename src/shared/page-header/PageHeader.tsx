@@ -9,6 +9,7 @@ export const PageHeader: FC<Props> = ({ label }) => {
     const borderColor = "gray.500";
     return (
         <Box
+            py="32"
             _before={{
                 display: "inline-block",
                 content: "''",

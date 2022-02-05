@@ -10,7 +10,7 @@ import "./App.scss";
 
 export const App: FC = () => {
     return (
-        <Container h="100%">
+        <Container h="100%" px="6">
             <Navbar />
             <Box pt={NavbarHeight} h="100%">
                 <Landing />

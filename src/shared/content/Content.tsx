@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Box, Text, Stack, StyleProps } from "@chakra-ui/react";
+import { Text, Stack, StyleProps } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 
 interface Props extends StyleProps {

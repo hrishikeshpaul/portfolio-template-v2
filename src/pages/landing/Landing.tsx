@@ -1,26 +1,48 @@
 import { FC } from "react";
 
-import { Center, Container, Heading, Image, HStack, Button, Stack } from "@chakra-ui/react";
-import { configs } from "content";
+import { Center, Container, Heading, Image, HStack, Button, Stack, IconButton } from "@chakra-ui/react";
+import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
-import { useContent } from "content/useContent";
+import { GitHubIcon, LinkedInIcon } from "utils/Icons";
 
 export const Landing: FC = () => {
-    const { landing } = useContent();
+    const content = useContent(ContentFile.Landing);
 
     return (
-        <Center h="100%" w="100%">
+        <Center h="100%" w="100%" px={{ base: 0, md: 16, lg: 0 }}>
             <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
-                <Stack flex={{ base: "1", md: "0.6" }} spacing="16">
+                <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                     <Stack spacing="8">
-                        <Heading fontSize={["5xl", "7xl"]} lineHeight={1}>
+                        <Heading fontSize={{ base: "6xl", md: "7xl" }} lineHeight={1}>
                             {configs.landing.headline}
                         </Heading>
-                        <Content fontSize="lg">{landing}</Content>
+                        <Content fontSize="lg">{content.landing}</Content>
                     </Stack>
-                    <Button>Resume</Button>
+                    <HStack spacing="2">
+                        <Button size="lg" borderRadius="xl" mr="2">
+                            Resume
+                        </Button>
+                        <IconButton
+                            fontSize="2xl"
+                            variant="ghost"
+                            color="gray.700"
+                            bg="transparent"
+                            _hover={{ color: "primary.500" }}
+                            aria-label="linkedin-icon"
+                            icon={<LinkedInIcon />}
+                        />
+                        <IconButton
+                            fontSize="2xl"
+                            bg="transparent"
+                            _hover={{ color: "primary.500" }}
+                            variant="ghost"
+                            color="gray.700"
+                            aria-label="github-icon"
+                            icon={<GitHubIcon />}
+                        />
+                    </HStack>
                 </Stack>
-                <Container flex="0.4" w="50%" display={{ base: "none", md: "block" }}>
+                <Container alignItems="center" flex="0.4" display={{ base: "none", lg: "block" }}>
                     <Image borderRadius="xl" src={configs.landing.picture} />
                 </Container>
             </HStack>

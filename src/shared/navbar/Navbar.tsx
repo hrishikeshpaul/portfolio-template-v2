@@ -11,7 +11,7 @@ export const Navbar: FC = () => {
 
     return (
         <Box position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)">
-            <Container py="4" bg={bg}>
+            <Container py="4" px="6" bg={bg}>
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
                     <HStack spacing="8">

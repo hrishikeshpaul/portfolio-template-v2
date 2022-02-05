@@ -1,7 +1,7 @@
-import { ThemeConfig, extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { ThemeConfig, extendTheme, withDefaultColorScheme, useColorModeValue } from "@chakra-ui/react";
 
 import { PrimaryColors } from "theme/colors/Colors";
-import { TextStyles } from "theme/components";
+import { components } from "theme/component-styles/ComponentStyles";
 
 const config: ThemeConfig = {
     cssVarPrefix: "hp",
@@ -18,9 +18,8 @@ const colors = {
     },
 };
 
-const components = {
-    Text: { ...TextStyles },
-};
+export const bgLight = "white";
+export const bgDark = "gray.800";
 
 export const theme = extendTheme(
     {

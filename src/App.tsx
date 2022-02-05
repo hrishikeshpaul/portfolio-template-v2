@@ -1,15 +1,14 @@
-import { Button, Heading, Text } from "@chakra-ui/react";
-import { Config } from "utils/ContentRegistry";
+import { FC } from "react";
+
+import { Container } from "@chakra-ui/react";
 
 import "./App.scss";
+import { Navbar } from "shared/navbar/Navbar";
 
-function App() {
+export const App: FC = () => {
     return (
-        <div className="App">
-            <Button>{Config.name}</Button>
-            <Text>{Config.name}</Text>
-        </div>
+        <Container>
+            <Navbar />
+        </Container>
     );
-}
-
-export default App;
+};

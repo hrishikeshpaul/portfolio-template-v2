@@ -1,12 +1,13 @@
-import { Button, Heading } from "@chakra-ui/react";
+import { Button, Heading, Text } from "@chakra-ui/react";
+import { Config } from "utils/ContentRegistry";
 
 import "./App.scss";
 
 function App() {
     return (
         <div className="App">
-            <Heading>Hello</Heading>
-            <Button>Is it working?</Button>
+            <Button>{Config.name}</Button>
+            <Text>{Config.name}</Text>
         </div>
     );
 }

@@ -1,14 +1,20 @@
 import { FC } from "react";
 
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
+
+import { Navbar } from "shared/navbar/Navbar";
+import { Landing } from "pages/landing/Landing";
+import { NavbarHeight } from "theme";
 
 import "./App.scss";
-import { Navbar } from "shared/navbar/Navbar";
 
 export const App: FC = () => {
     return (
-        <Container>
+        <Container h="100%">
             <Navbar />
+            <Box pt={NavbarHeight} h="100%">
+                <Landing />
+            </Box>
         </Container>
     );
 };

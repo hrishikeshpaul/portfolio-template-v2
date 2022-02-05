@@ -7,6 +7,7 @@ import { Landing } from "pages/landing/Landing";
 import { NavbarHeight } from "theme";
 
 import "./App.scss";
+import { PageHeader } from "shared/page-header/PageHeader";
 
 export const App: FC = () => {
     return (
@@ -14,6 +15,7 @@ export const App: FC = () => {
             <Navbar />
             <Box pt={NavbarHeight} h="100%">
                 <Landing />
+                <PageHeader />
             </Box>
         </Container>
     );

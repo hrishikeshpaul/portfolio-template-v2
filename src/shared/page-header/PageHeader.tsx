@@ -3,12 +3,15 @@ import { FC } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 interface Props {
+    id?: string;
     label: string;
 }
-export const PageHeader: FC<Props> = ({ label }) => {
+export const PageHeader: FC<Props> = ({ id, label }) => {
     const borderColor = "gray.500";
+
     return (
         <Box
+            id={id}
             py={{ base: "16", md: "24" }}
             _before={{
                 display: "inline-block",

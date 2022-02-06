@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Badge, Box, Button, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 
 export enum ImagePosition {

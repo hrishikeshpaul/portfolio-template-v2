@@ -1,12 +1,21 @@
 import { FC } from "react";
 
-import { Center, Container, Heading, Image, HStack, Button, Stack, IconButton } from "@chakra-ui/react";
+import { Center, Container, Heading, Image, HStack, Button, Stack, IconButton, Icon, Flex } from "@chakra-ui/react";
+
 import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
-import { GitHubIcon, LinkedInIcon } from "utils/Icons";
+import { ChevronDownIcon, GitHubIcon, LinkedInIcon } from "utils/Icons";
 
 export const Landing: FC = () => {
     const content = useContent(ContentFile.Landing);
+
+    const scrollIntoView = () => {
+        const featuredHeader = document.getElementById("featured-projects");
+
+        if (featuredHeader) {
+            featuredHeader.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    };
 
     return (
         <>
@@ -48,7 +57,17 @@ export const Landing: FC = () => {
                     </Container>
                 </HStack>
             </Center>
-            More
+            <Flex justifyContent="center">
+                <Icon
+                    fontSize="3xl"
+                    cursor="pointer"
+                    transition="color 0.25s ease-in-out"
+                    _hover={{ color: "primary.500" }}
+                    onClick={() => scrollIntoView()}
+                >
+                    <ChevronDownIcon />
+                </Icon>
+            </Flex>
         </>
     );
 };

@@ -16,7 +16,7 @@ export const App: FC = () => {
             <Navbar />
             <Box mt={NavbarHeight} h="100%">
                 <Landing />
-                <PageHeader label="Featured Projects" />
+                <PageHeader id="featured-projects" label="Featured Projects" />
                 <FeaturedProjects />
             </Box>
         </Container>

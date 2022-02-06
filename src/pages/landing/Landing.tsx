@@ -17,6 +17,7 @@ import {
 import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
 import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
+import { onGitHubOpen, onLinkedinOpen, onResumeOpen } from "utils/Functions";
 
 const iconButtonStyles = {
     fontSize: "2xl",
@@ -38,10 +39,6 @@ export const Landing: FC = () => {
         }
     };
 
-    const onLinkOpen = (link: string) => {
-        window.open(link, "_blank");
-    };
-
     const onMail = () => {
         window.open("mailto:" + configs.common.email);
     };
@@ -58,25 +55,20 @@ export const Landing: FC = () => {
                             <Content fontSize="lg">{content.landing}</Content>
                         </Stack>
                         <HStack spacing="2">
-                            <Button
-                                size="lg"
-                                borderRadius="xl"
-                                mr="2"
-                                onClick={() => onLinkOpen(configs.common.resume)}
-                            >
+                            <Button size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
                                 Resume
                             </Button>
                             <IconButton
                                 {...iconButtonStyles}
                                 aria-label="linkedin-icon"
                                 icon={<LinkedInIcon />}
-                                onClick={() => onLinkOpen(configs.common.linkedin)}
+                                onClick={onLinkedinOpen}
                             />
                             <IconButton
                                 {...iconButtonStyles}
                                 aria-label="github-icon"
                                 icon={<GitHubIcon />}
-                                onClick={() => onLinkOpen(configs.common.github)}
+                                onClick={onGitHubOpen}
                             />
                             <IconButton
                                 {...iconButtonStyles}

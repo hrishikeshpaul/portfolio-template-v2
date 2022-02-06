@@ -4,7 +4,8 @@ import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra
 
 import { configs } from "content";
 import { bgDark, bgLight } from "theme";
-import { LogoType } from "./logo-type/LogoType";
+import { LogoType } from "shared/navbar/logo-type/LogoType";
+import { onResumeOpen } from "utils/Functions";
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
@@ -21,7 +22,9 @@ export const Navbar: FC = () => {
                         <Button variant="link" color="black">
                             About
                         </Button>
-                        <Button variant="link">Resume</Button>
+                        <Button variant="link" onClick={onResumeOpen}>
+                            Resume
+                        </Button>
                     </HStack>
                 </Flex>
             </Container>

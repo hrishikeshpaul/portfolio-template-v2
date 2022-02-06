@@ -37,5 +37,21 @@
         "description": "An MVP Proposal - Bunder is an intuitive web platform for micro-communities to share sensitive data with privacy within the community and allow engagement amongst them.",
         "readMore": "https://iampaul.web.app/projects/bunder",
         "image": "/assets/other-projects/bunder.png"
+    },
+    {
+        "id": "other-project-suicide-analyzer",
+        "title": "Suicide Analyzer",
+        "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
+        "description": "This is a web application, uses a map to demonstrate the number suicides committed around the globe, according to a dataset provided by the WHO.",
+        "github": "https://github.com/hrishikeshpaul/whodata",
+        "image": "/assets/other-projects/suicide-analyzer.png"
+    },
+    {
+        "id": "other-project-nutricare",
+        "title": "Nutricare",
+        "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
+        "description": "A web app for patients to input nutrient intake data and researchers to analyse the data with the help of graphs and tables. A researcher can conduct studies on N different subjects for a particular problem statement.",
+        "readMore": "https://angel.co/projects/576300-nutricare",
+        "image": "/assets/other-projects/nutricare.png"
     }
 ]

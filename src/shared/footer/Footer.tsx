@@ -21,8 +21,12 @@ export const Footer: FC = () => {
         <>
             <PageHeader label="SAY HI" />
             <Flex pb="2" gap="3" overflow="hidden" alignItems="center">
-                <Heading {...headerStyles} onClick={onMailTo}>
+                <Heading {...headerStyles} onClick={onMailTo} display={{ base: "none", md: "block" }}>
                     {configs.common.email}
+                </Heading>
+
+                <Heading {...headerStyles} onClick={onMailTo} display={{ base: "block", md: "none" }}>
+                    email
                 </Heading>
 
                 <Heading fontSize={{ base: "2xl", md: "3xl" }}>/</Heading>
@@ -37,7 +41,16 @@ export const Footer: FC = () => {
             <Box pt="8">
                 <Socials resume={false} mail={false} />
             </Box>
-            <Box></Box>
+            <Flex
+                py="2"
+                fontSize="sm"
+                color="gray.500"
+                justifyContent={{ base: "center", md: "space-between" }}
+                direction={{ base: "column", md: "row" }}
+            >
+                <Text>This site is hand-crafted, with care by me.</Text>
+                <Text>&copy; {new Date().getFullYear()} All rights reserved.</Text>
+            </Flex>
         </>
     );
 };

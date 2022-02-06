@@ -11,8 +11,8 @@ export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
 
     return (
-        <Box position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="1000">
-            <Container py="4" px="6" bg={bg}>
+        <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
+            <Container py="4" px="6">
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
                     <HStack spacing="8">

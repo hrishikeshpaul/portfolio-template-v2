@@ -1,0 +1,12 @@
+[
+    {
+        "id": "other-project-noq",
+        "title": "NoQ Job Portal",
+        "year": "Aug 2019 - Dec 2019",
+        "github": "https://github.com/hrishikeshpaul/noq",
+        "tags": ["Vue", "NodeJS", "JavaScript", "MongoDB", "Heroku", "Agile", "Sockets", "JIRA"],
+        "description": "NoQ is a tool which allows for both employers and students to skip the hassle seen in modern day career fairs, while effectively pairing up students with employees based on various factors.",
+        "readMore": "https://iampaul.web.app/projects/noq",
+        "image": "/assets/featured-projects/asctb.png"
+    }
+]

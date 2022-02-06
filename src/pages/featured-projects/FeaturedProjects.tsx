@@ -7,7 +7,7 @@ import { FeaturedProjectCard, ImagePosition } from "pages/featured-projects/feat
 
 export const FeaturedProjects: FC = () => {
     return (
-        <Box h="100%" w="100%">
+        <Box id="featured-projects">
             {configs.featuredProjects.map((project, idx) => (
                 <FeaturedProjectCard
                     imagePosition={idx % 2 === 0 ? ImagePosition.Right : ImagePosition.Left}

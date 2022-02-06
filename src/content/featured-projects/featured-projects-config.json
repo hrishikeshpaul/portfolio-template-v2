@@ -11,9 +11,31 @@
         "image": "/assets/featured-projects/asctb.png"
     },
     {
+        "id": "featured-project-scrapbook",
+        "title": "Scrapbook",
+        "year": "Jan 2021 - May 2021",
+        "tags": [
+            "Angular 11",
+            "Flask",
+            "Node",
+            "Python",
+            "TypeScript",
+            "Docker",
+            "Docker Hub",
+            "Jenkins",
+            "Kubernetes",
+            "Google Kubernetes Engine"
+        ],
+        "demo": "http://34.69.102.109/",
+        "github": "https://github.com/hrishikeshpaul/scrapbook",
+        "description": "A micro-service architecture based web application that enables users to upload, share and manage images.",
+        "readMore": "https://iampaul.web.app/projects/measure-ux",
+        "image": "/assets/featured-projects/scrapbook.png"
+    },
+    {
         "id": "featured-project-measure-ux",
         "title": "Measuring User Experience",
-        "year": "Sep 2021 - Nov 2021",
+        "year": "Sep 2020 - Dec 2020",
         "tags": ["UX Research", "User Journey", "Surveys", "Interviews", "Adobe XD"],
         "description": "A project to quantify user experiences demonstrated by measuring the user experience of uploading a photo on Instagram.",
         "readMore": "https://iampaul.web.app/projects/measure-ux",

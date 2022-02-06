@@ -12,7 +12,8 @@ export const PageHeader: FC<Props> = ({ id, label }) => {
     return (
         <Box
             id={id}
-            py={{ base: "16", md: "24" }}
+            pt={{ base: "24", md: "32" }}
+            pb="16"
             _before={{
                 display: "inline-block",
                 content: "''",

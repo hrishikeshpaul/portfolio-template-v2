@@ -4,13 +4,12 @@ import { Box, Container } from "@chakra-ui/react";
 
 import { Navbar } from "shared/navbar/Navbar";
 import { Landing } from "pages/landing/Landing";
-import { NavbarHeight } from "theme";
-
-import "./App.scss";
 import { PageHeader } from "shared/page-header/PageHeader";
+import { NavbarHeight } from "theme";
 import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 import { OtherProjects } from "pages/other-projects/OtherProjects";
-import { HashScroll } from "utils/HashScroll";
+
+import "./App.scss";
 
 export const App: FC = () => {
     return (
@@ -23,7 +22,6 @@ export const App: FC = () => {
                 <PageHeader id="page-other-projects" label="other Projects" />
                 <OtherProjects />
             </Box>
-            <HashScroll />
         </Container>
     );
 };

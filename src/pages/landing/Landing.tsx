@@ -14,7 +14,7 @@ import {
     Box,
 } from "@chakra-ui/react";
 
-import { Content, configs, useContent, ContentFile } from "shared/content/Content";
+import { Content, configs, useContent, MarkdownFile } from "shared/content/Content";
 import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
 import { onGitHubOpen, onLinkedinOpen, onMailTo, onResumeOpen } from "utils/Functions";
 
@@ -28,7 +28,7 @@ const iconButtonStyles = {
 };
 
 export const Landing: FC = () => {
-    const content = useContent(ContentFile.Landing);
+    const content = useContent(MarkdownFile.Landing);
 
     const scrollIntoView = () => {
         const featuredHeader = document.getElementById("featured-projects");

@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import common from "content/common/common.json";
 import landing from "content/landing/landing-config.json";
 import featuredProjects from "content/featured-projects/featured-projects-config.json";
+import otherProjects from "content/other-projects/other-projects-config.json";
 
 import LandingMd from "content/landing/landing.md";
 
@@ -13,21 +14,22 @@ export const configs = {
     common,
     landing,
     featuredProjects,
+    otherProjects,
 };
 
 interface State {
     landing: string;
 }
 
-export enum ContentFile {
+export enum MarkdownFile {
     Landing,
 }
 
 const Mapper = {
-    [ContentFile.Landing]: LandingMd,
+    [MarkdownFile.Landing]: LandingMd,
 };
 
-export const useContent = (fileName: ContentFile) => {
+export const useContent = (fileName: MarkdownFile) => {
     const [data, setData] = useState<State>({ landing: "" });
 
     useEffect(() => {

@@ -4,11 +4,7 @@ import { Button, Flex, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 import { open } from "utils/Functions";
 
-interface ButtonProps {
-    buttonSize?: string;
-}
-
-interface GitHubButtonProps extends ButtonProps {
+interface GitHubButtonProps {
     github?: string;
     display?: any;
 }
@@ -17,7 +13,7 @@ interface ReadMoreProps {
     readMore?: string;
 }
 
-interface LiveDemoProps extends ButtonProps {
+interface LiveDemoProps {
     demo?: string;
     display?: any;
 }
@@ -65,15 +61,14 @@ export const LiveDemo: FC<LiveDemoProps> = ({ demo, display }) => {
     ) : null;
 };
 
-export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo, buttonSize = "md" }) => {
+export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo }) => {
     return (
-        <Flex justifyContent="space-between" alignItems="center" py="4">
+        <Flex justifyContent={readMore ? "space-between" : "flex-end"} alignItems="center" py="4">
+            <ReadMore readMore={readMore} />
             <Flex gap="4" justifyContent="space-between" display={demo || github ? "flex" : "none"}>
                 <LiveDemo demo={demo} />
                 <GitHubButton github={github} />
             </Flex>
-
-            <ReadMore readMore={readMore} />
         </Flex>
     );
 };

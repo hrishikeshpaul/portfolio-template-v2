@@ -1,31 +1,10 @@
 import { FC } from "react";
 
-import {
-    Center,
-    Container,
-    Heading,
-    Image,
-    HStack,
-    Button,
-    Stack,
-    IconButton,
-    Icon,
-    Flex,
-    Box,
-} from "@chakra-ui/react";
+import { Center, Container, Heading, Image, HStack, Stack, Icon, Flex, Box } from "@chakra-ui/react";
 
 import { Content, configs, useContent, MarkdownFile } from "shared/content/Content";
-import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
-import { onGitHubOpen, onLinkedinOpen, onMailTo, onResumeOpen } from "utils/Functions";
-
-const iconButtonStyles = {
-    fontSize: "2xl",
-    variant: "ghost",
-    color: "gray.700",
-    bg: "transparent",
-    _hover: { color: "primary.500" },
-    _active: { bg: "transparent" },
-};
+import { ChevronDownIcon } from "utils/Icons";
+import { Socials } from "shared/socials/Socials";
 
 export const Landing: FC = () => {
     const content = useContent(MarkdownFile.Landing);
@@ -49,30 +28,7 @@ export const Landing: FC = () => {
                             </Heading>
                             <Content fontSize="lg">{content.landing}</Content>
                         </Stack>
-                        <HStack spacing="2">
-                            <Button size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
-                                Resume
-                            </Button>
-                            <IconButton
-                                {...iconButtonStyles}
-                                aria-label="linkedin-icon"
-                                icon={<LinkedInIcon />}
-                                onClick={onLinkedinOpen}
-                            />
-                            <IconButton
-                                {...iconButtonStyles}
-                                aria-label="github-icon"
-                                icon={<GitHubIcon />}
-                                onClick={onGitHubOpen}
-                            />
-                            <IconButton
-                                {...iconButtonStyles}
-                                fontSize="3xl"
-                                aria-label="mail-icon"
-                                icon={<MailIcon />}
-                                onClick={onMailTo}
-                            />
-                        </HStack>
+                        <Socials />
                     </Stack>
                     <Container alignItems="center" flex="0.4" display={{ base: "none", lg: "block" }}>
                         <Image borderRadius="xl" src={configs.landing.picture} />

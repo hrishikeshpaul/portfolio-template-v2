@@ -20,7 +20,8 @@ export const PageHeader: FC<Props> = ({ id, label }) => {
                 borderBottom: "2px solid ",
                 borderColor,
                 width: "5rem",
-                margin: "auto 0.5rem",
+                margin: "auto",
+                marginRight: '0.5rem',
                 transform: "translateY(-0.35rem)",
             }}
             textTransform="uppercase"

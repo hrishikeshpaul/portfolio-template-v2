@@ -1,4 +1,4 @@
-import { configs } from "content";
+import { configs } from "shared/content/Content";
 
 const open = (link: string) => window.open(link, "_blank");
 

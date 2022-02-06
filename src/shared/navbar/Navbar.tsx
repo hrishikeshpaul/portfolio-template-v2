@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 
-import { configs } from "content";
+import { configs } from "shared/content/Content";
 import { bgDark, bgLight } from "theme";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { onResumeOpen } from "utils/Functions";

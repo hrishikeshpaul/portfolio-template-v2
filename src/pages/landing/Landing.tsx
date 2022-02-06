@@ -14,8 +14,7 @@ import {
     Box,
 } from "@chakra-ui/react";
 
-import { configs, useContent, ContentFile } from "content";
-import { Content } from "shared/content/Content";
+import { Content, configs, useContent, ContentFile } from "shared/content/Content";
 import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
 import { onGitHubOpen, onLinkedinOpen, onMailTo, onResumeOpen } from "utils/Functions";
 

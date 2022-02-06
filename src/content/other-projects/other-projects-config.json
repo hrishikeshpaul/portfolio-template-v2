@@ -37,5 +37,14 @@
         "description": "An MVP Proposal - Bunder is an intuitive web platform for micro-communities to share sensitive data with privacy within the community and allow engagement amongst them.",
         "readMore": "https://iampaul.web.app/projects/bunder",
         "image": "/assets/other-projects/bunder.png"
+    },
+    {
+        "id": "other-project-bunder2",
+        "title": "Bunder",
+        "year": "Jan 2020 - Apr 2020",
+        "tags": ["Surveying", "User Interviews", "Ideation", "Analysis", "Product Planning"],
+        "description": "An MVP Proposal - Bunder is an intuitive web platform for micro-communities to share sensitive data with privacy within the community and allow engagement amongst them.",
+        "readMore": "https://iampaul.web.app/projects/bunder",
+        "image": "/assets/other-projects/bunder.png"
     }
 ]

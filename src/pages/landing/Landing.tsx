@@ -31,10 +31,10 @@ export const Landing: FC = () => {
     const content = useContent(MarkdownFile.Landing);
 
     const scrollIntoView = () => {
-        const featuredHeader = document.getElementById("featured-projects");
+        const featuredHeader = document.getElementById("page-featured-projects");
 
         if (featuredHeader) {
-            featuredHeader.scrollIntoView({ behavior: "smooth", block: "center" });
+            featuredHeader.scrollIntoView({ behavior: "smooth" });
         }
     };
 

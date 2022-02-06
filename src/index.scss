@@ -8,4 +8,13 @@ html,
 body,
 #root {
   height: 100%;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 50 50' style='fill:black;font-size:24px; transform: rotate(180deg) scale(1.1);'><text y='50%'>🍕</text></svg>")
+      20 20,
+    auto;
+
+  *::selection {
+    // color: red;
+    background: var(--hp-colors-red-200);
+    transition: all 0.25s ease-in-out !important;
+  }
 }

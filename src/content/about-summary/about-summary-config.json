@@ -1,0 +1,77 @@
+{
+    "education": [
+        {
+            "school": "Indiana University",
+            "degree": "Master of Science in Computer Science",
+            "gpa": "4/4",
+            "duration": "Aug 2019 - May 2021"
+        }
+    ],
+    "experiences": [
+        {
+            "company": "Reputation",
+            "position": "Software Engineer (Frontend)",
+            "duration": "Jun 2020 - Jun 2021",
+            "description": [
+                "Revamping the current report generation framework suing React, that aggregates data from 30 modules to support an interactive cartesian system.​",
+                "Integrated user activity data from BigQuery into a custom tailored dashboard available to 10000+ clients.",
+                "Spearheaded the work on multiple reports for 5 priority clients to provide additional functionalities."
+            ]
+        },
+        {
+            "company": "CNS (NIH), Indiana University",
+            "position": "Software Engineer",
+            "duration": "Jun 2020 - Jun 2021",
+            "description": [
+                "Developed state of the art visualization tools for researchers and doctors to envision large biological datasets using ​Angular 11​, Node & Vega.​",
+                "Devised an algorithm to compute statistics that highlight anomalies in the data and displayed them on an intuitive interface.",
+                "Created detailed UX flows, experience maps, wire-frames and conducted interviews across various biological consortia to enhance user experience."
+            ]
+        },
+        {
+            "company": "Skylark Drones",
+            "position": "Software Engineer Intern",
+            "start": "Jan 2019",
+            "end": "Jun 2019",
+            "description": [
+                "Developed a web app for mission planning, control and execution using Vue & Flask, thereby improving onside project performance by 22%.​",
+                "Designed an icon set for various functionalities using ​Illustrator​, which improved usability by 20%."
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "title": "Programming",
+            "tools": ["TypeScript", "JavaScript", "Python", "C/C++", "Java", "NoSQL", "SQL"]
+        },
+        {
+            "title": "Web",
+            "tools": ["React", "Angular 11", "Vue", "NodeJS", "Flask", "Redux", "NGXS", "HTML/CSS", "OAuth"]
+        },
+        {
+            "title": "Databases",
+            "tools": ["MongoDB", "Redis", "MySQL", "Firebase"]
+        },
+
+        {
+            "title": "OS & Tools",
+            "tools": ["MacOS", "Linux", "Git", "Agile (Scrum)", "MVC", "Jenkins", "Heroku", "Docker", "Kubernetes"]
+        },
+        {
+            "title": "Design & Research",
+            "tools": [
+                "Surveys",
+                "Interviews",
+                "User Research",
+                "Design Strategy",
+                "Experience Mapping",
+                "Usability Testing",
+                "Prototyping",
+                "Adobe XD",
+                "Sketch",
+                "Illustrator",
+                "Photoshop"
+            ]
+        }
+    ]
+}

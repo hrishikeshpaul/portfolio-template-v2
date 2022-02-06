@@ -9,6 +9,7 @@ import { Footer } from "shared/footer/Footer";
 import { NavbarHeight } from "theme";
 import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 import { OtherProjects } from "pages/other-projects/OtherProjects";
+import { AboutSummary } from "pages/about-summary/AboutSummary";
 
 import "./App.scss";
 
@@ -22,7 +23,8 @@ export const App: FC = () => {
                 <FeaturedProjects />
                 <PageHeader id="page-other-projects" label="Other Projects" />
                 <OtherProjects />
-                {/* <PageHeader id="page-about-me" label="About Me" /> */}
+                <PageHeader id="page-about-me" label="About Me" />
+                <AboutSummary />
             </Box>
             <Footer />
         </Container>

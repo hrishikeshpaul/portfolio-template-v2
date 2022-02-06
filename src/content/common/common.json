@@ -4,6 +4,8 @@
         "mobile": "HP",
         "desktop": "Hrishikesh Paul"
     },
+    "mainPicture": "/assets/HP.jpg",
+    "pronunciation": "/ri-shi-kaysh/",
     "cssVarPrefix": "hp",
     "email": "hrishikeshpaul12@gmail.com",
     "linkedin": "https://www.linkedin.com/in/hrishikeshpaul/",

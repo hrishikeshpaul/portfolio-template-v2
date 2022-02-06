@@ -9,6 +9,7 @@ import featuredProjects from "content/featured-projects/featured-projects-config
 import otherProjects from "content/other-projects/other-projects-config.json";
 
 import LandingMd from "content/landing/landing.md";
+import AboutSummaryMd from "content/about-summary/about-summary.md";
 
 export const configs = {
     common,
@@ -19,23 +20,26 @@ export const configs = {
 
 interface State {
     landing: string;
+    aboutSummary: string;
 }
 
 export enum MarkdownFile {
-    Landing,
+    Landing = "landing",
+    AboutSummary = "aboutSummary",
 }
 
 const Mapper = {
     [MarkdownFile.Landing]: LandingMd,
+    [MarkdownFile.AboutSummary]: AboutSummaryMd,
 };
 
 export const useContent = (fileName: MarkdownFile) => {
-    const [data, setData] = useState<State>({ landing: "" });
+    const [data, setData] = useState<State>({ landing: "", aboutSummary: "" });
 
     useEffect(() => {
         fetch(Mapper[fileName])
             .then((res) => res.text())
-            .then((text) => setData((data) => ({ ...data, landing: text })));
+            .then((text) => setData((data) => ({ ...data, [fileName]: text })));
     }, [fileName]);
 
     return data;

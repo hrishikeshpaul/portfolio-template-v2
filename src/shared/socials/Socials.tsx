@@ -1,25 +1,24 @@
 import { Button, HStack, IconButton } from "@chakra-ui/react";
 import { FC } from "react";
-import { onGitHubOpen, onLinkedinOpen, onMailTo, onResumeOpen } from "utils/Functions";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
+import { configs } from "shared/content/Content";
+import { onResumeOpen, open } from "utils/Functions";
+import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, YoutubeIcon } from "utils/Icons";
 
-const iconButtonStyles = {
-    fontSize: "2xl",
-    variant: "ghost",
-    color: "gray.700",
-    bg: "transparent",
-    _hover: { color: "primary.500" },
-    _active: { bg: "transparent" },
+const LinksToIconMapper: Record<string, JSX.Element> = {
+    linkedin: <LinkedInIcon />,
+    github: <GitHubIcon />,
+    facebook: <FacebookIcon />,
+    instagram: <InstagramIcon />,
+    youtube: <YoutubeIcon />,
+    mail: <MailIcon />,
 };
 
 interface Props {
     resume?: boolean;
-    github?: boolean;
-    linkedin?: boolean;
-    mail?: boolean;
+    exclude?: Array<string>;
 }
 
-export const Socials: FC<Props> = ({ resume = true, github = true, linkedin = true, mail = true }) => {
+export const Socials: FC<Props> = ({ resume = true, exclude }) => {
     return (
         <HStack spacing="6">
             {resume && (
@@ -27,35 +26,32 @@ export const Socials: FC<Props> = ({ resume = true, github = true, linkedin = tr
                     Resume
                 </Button>
             )}
-            {linkedin && (
-                <IconButton
-                    minWidth="0"
-                    {...iconButtonStyles}
-                    aria-label="linkedin-icon"
-                    icon={<LinkedInIcon />}
-                    onClick={onLinkedinOpen}
-                />
-            )}
-
-            {github && (
-                <IconButton
-                    minWidth="0"
-                    {...iconButtonStyles}
-                    aria-label="github-icon"
-                    icon={<GitHubIcon />}
-                    onClick={onGitHubOpen}
-                />
-            )}
-            {mail && (
-                <IconButton
-                    minWidth="0"
-                    {...iconButtonStyles}
-                    fontSize="3xl"
-                    aria-label="mail-icon"
-                    icon={<MailIcon />}
-                    onClick={onMailTo}
-                />
+            {configs.common.socials.map(
+                (social) =>
+                    !exclude?.includes(social.type) && (
+                        <IconButton
+                            minWidth="0"
+                            bg="transparent"
+                            fontSize="2xl"
+                            color="gray.700"
+                            _hover={{ color: "primary.500" }}
+                            _active={{ bg: "transparent" }}
+                            aria-label={`${social.type}-icon`}
+                            icon={LinksToIconMapper[social.type]}
+                            onClick={() => open(social.link)}
+                        />
+                    ),
             )}
         </HStack>
     );
+};
+
+Socials.defaultProps = {
+    // resume: false,
+    // github: false,
+    // linkedin: false,
+    // mail: false,
+    // youtube: false,
+    // facebook: false,
+    // instagram: false,
 };

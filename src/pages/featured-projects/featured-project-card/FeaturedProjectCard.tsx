@@ -26,13 +26,13 @@ const ImagePositionLayoutMapper: Record<ImagePosition, "row" | "row-reverse"> = 
 };
 
 const ImagePositionPaddingRightMapper: Record<ImagePosition, string> = {
-    [ImagePosition.Right]: "12",
+    [ImagePosition.Right]: "8",
     [ImagePosition.Left]: "0",
 };
 
 const ImagePositionPaddingLeftMapper: Record<ImagePosition, string> = {
     [ImagePosition.Right]: "0",
-    [ImagePosition.Left]: "12",
+    [ImagePosition.Left]: "8",
 };
 
 export const FeaturedProjectCard: FC<Props> = ({
@@ -87,7 +87,7 @@ export const FeaturedProjectCard: FC<Props> = ({
                         <Image borderRadius="xl" src={image} />
                     </Box>
 
-                    <Text fontSize="lg" pt="3">
+                    <Text fontSize="lg" pt={{ base: 0, lg: "3" }}>
                         {description}
                     </Text>
                     <Flex py="2" wrap="wrap" gap="4">

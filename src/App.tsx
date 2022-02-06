@@ -12,9 +12,9 @@ import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 
 export const App: FC = () => {
     return (
-        <Container h="100%" px="6">
+        <Container h="100%" px={{ base: 6, md: 24, lg: 6 }}>
             <Navbar />
-            <Box mt={NavbarHeight} h="100%">
+            <Box mt={{ base: "96px", md: NavbarHeight }} h="100%">
                 <Landing />
                 <PageHeader id="featured-projects" label="Featured Projects" />
                 <FeaturedProjects />

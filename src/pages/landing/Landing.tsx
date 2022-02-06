@@ -30,9 +30,13 @@ export const Landing: FC = () => {
         window.open(link, "_blank");
     };
 
+    const onMail = () => {
+        window.open("mailto:" + configs.common.email);
+    };
+
     return (
         <>
-            <Center py="32" px={{ base: 0, md: 16, lg: 0 }}>
+            <Center pb="32">
                 <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                     <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                         <Stack spacing="8">
@@ -67,7 +71,7 @@ export const Landing: FC = () => {
                                 fontSize="3xl"
                                 aria-label="mail-icon"
                                 icon={<MailIcon />}
-                                onClick={() => onLinkOpen(configs.common.email)}
+                                onClick={onMail}
                             />
                         </HStack>
                     </Stack>

@@ -20,7 +20,7 @@ const colors = {
 
 export const bgLight = "white";
 export const bgDark = "gray.800";
-export const NavbarHeight = "60px";
+export const NavbarHeight = "120px";
 
 export const theme = extendTheme(
     {

@@ -14,7 +14,7 @@ export const LogoType: FC<Props> = ({ text }) => {
 
     return (
         <Box transition="all 0.2s ease-in-out" _hover={{ cursor: "pointer", color: "primary.600" }}>
-            <Text fontSize="lg" fontWeight="medium">
+            <Text fontSize={{ base: "3xl", md: "4xl" }} lineHeight="1" fontFamily="Signature" mb="-4">
                 {variant}
             </Text>
         </Box>

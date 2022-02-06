@@ -19,8 +19,10 @@ export const App: FC = () => {
                 <Landing />
                 <PageHeader id="page-featured-projects" label="Featured Projects" />
                 <FeaturedProjects />
-                <PageHeader id="page-other-projects" label="other Projects" />
+                <PageHeader id="page-other-projects" label="Other Projects" />
                 <OtherProjects />
+                <PageHeader id="page-about-me" label="About Me" />
+
             </Box>
         </Container>
     );

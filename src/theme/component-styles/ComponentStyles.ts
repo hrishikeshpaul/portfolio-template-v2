@@ -16,6 +16,14 @@ const ButtonStyles: ComponentStyleConfig = {
     baseStyle: {
         fontWeight: "bold",
     },
+    variants: {
+        outline: (props: any) => ({
+            _hover: {
+                color: "white",
+                bg: `${props.colorScheme}.500`,
+            },
+        }),
+    },
 };
 
 export const components = {

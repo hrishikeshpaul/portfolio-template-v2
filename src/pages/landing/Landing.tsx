@@ -1,6 +1,18 @@
 import { FC } from "react";
 
-import { Center, Container, Heading, Image, HStack, Button, Stack, IconButton, Icon, Flex } from "@chakra-ui/react";
+import {
+    Center,
+    Container,
+    Heading,
+    Image,
+    HStack,
+    Button,
+    Stack,
+    IconButton,
+    Icon,
+    Flex,
+    Box,
+} from "@chakra-ui/react";
 
 import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
@@ -35,7 +47,7 @@ export const Landing: FC = () => {
     };
 
     return (
-        <>
+        <Box id="page-landing">
             <Center pb="32">
                 <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                     <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
@@ -91,6 +103,6 @@ export const Landing: FC = () => {
                     <ChevronDownIcon />
                 </Icon>
             </Flex>
-        </>
+        </Box>
     );
 };

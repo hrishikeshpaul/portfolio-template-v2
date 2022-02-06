@@ -9,6 +9,8 @@ import { NavbarHeight } from "theme";
 import "./App.scss";
 import { PageHeader } from "shared/page-header/PageHeader";
 import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
+import { OtherProjects } from "pages/other-projects/OtherProjects";
+import { HashScroll } from "utils/HashScroll";
 
 export const App: FC = () => {
     return (
@@ -16,9 +18,12 @@ export const App: FC = () => {
             <Navbar />
             <Box mt={{ base: "96px", md: NavbarHeight }} h="100%">
                 <Landing />
-                <PageHeader id="featured-projects" label="Featured Projects" />
+                <PageHeader id="page-featured-projects" label="Featured Projects" />
                 <FeaturedProjects />
+                <PageHeader id="page-other-projects" label="other Projects" />
+                <OtherProjects />
             </Box>
+            <HashScroll />
         </Container>
     );
 };

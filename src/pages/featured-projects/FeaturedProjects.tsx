@@ -2,13 +2,17 @@ import { FC } from "react";
 
 import { Box } from "@chakra-ui/react";
 import { configs } from "content";
-import { FeaturedProjectCard } from "./featured-project-card/FeaturedProjectCard";
+import { FeaturedProjectCard, ImagePosition } from "./featured-project-card/FeaturedProjectCard";
 
 export const FeaturedProjects: FC = () => {
     return (
-        <Box py="32" h="100%" w="100%">
-            {configs.featuredProjects.map((project) => (
-                <FeaturedProjectCard key={project.id} {...project} />
+        <Box h="100%" w="100%">
+            {configs.featuredProjects.map((project, idx) => (
+                <FeaturedProjectCard
+                    imagePosition={idx % 2 === 0 ? ImagePosition.Right : ImagePosition.Left}
+                    key={project.id}
+                    {...project}
+                />
             ))}
         </Box>
     );

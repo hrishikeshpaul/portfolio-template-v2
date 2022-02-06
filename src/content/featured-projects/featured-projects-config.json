@@ -3,12 +3,20 @@
         "id": "featured-project-asctb-reporter",
         "title": "ASCT+B Reporter",
         "year": "Jun 2020 - Jun 2021",
-        "type": "Project",
         "demo": "https://hubmapconsortium.github.io/ccf-asct-reporter/",
         "github": "https://github.com/hrishikeshpaul/ccf-asct-reporter",
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
         "description": "A powerful visualization tool to envision large biomedical datasets for researchers, doctors and various subject matter experts.",
         "readMore": "https://iampaul.web.app/projects/asctb-reporter",
         "image": "/assets/featured-projects/asctb.png"
+    },
+    {
+        "id": "featured-project-measure-ux",
+        "title": "Measuring User Experience",
+        "year": "Sep 2021 - Nov 2021",
+        "tags": ["UX Research", "User Journey", "Surveys", "Interviews", "Adobe XD"],
+        "description": "A project to quantify user experiences demonstrated by measuring the user experience of uploading a photo on Instagram.",
+        "readMore": "https://iampaul.web.app/projects/measure-ux",
+        "image": "/assets/featured-projects/measure-ux.png"
     }
 ]

@@ -3,30 +3,49 @@ import { FC } from "react";
 import { Badge, Box, Button, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 
+export enum ImagePosition {
+    Right,
+    Left,
+}
 interface Props {
     id: string;
     title: string;
     year: string;
-    type?: string;
     demo?: string;
     github?: string;
     tags: string[];
     description: string;
     readMore?: string;
     image: string;
+    imagePosition: ImagePosition;
 }
+
+const ImagePositionLayoutMapper: Record<ImagePosition, "row" | "row-reverse"> = {
+    [ImagePosition.Right]: "row",
+    [ImagePosition.Left]: "row-reverse",
+};
+
+const ImagePositionPaddingRightMapper: Record<ImagePosition, string> = {
+    [ImagePosition.Right]: "12",
+    [ImagePosition.Left]: "0",
+};
+
+const ImagePositionPaddingLeftMapper: Record<ImagePosition, string> = {
+    [ImagePosition.Right]: "0",
+    [ImagePosition.Left]: "12",
+};
 
 export const FeaturedProjectCard: FC<Props> = ({
     id,
     title,
     year,
-    type,
     demo,
     github,
     tags,
     description,
     readMore,
     image,
+    imagePosition,
 }) => {
     const onLinkPress = (link: string) => {
         window.open(link, "_blank");
@@ -36,11 +55,13 @@ export const FeaturedProjectCard: FC<Props> = ({
         <Flex
             justifyContent="space-between"
             id="featured-project-card"
-            direction={{ base: "column-reverse", lg: "row" }}
+            py={{ base: "8", md: "24" }}
+            direction={{ base: "column-reverse", lg: ImagePositionLayoutMapper[imagePosition] }}
         >
             <Flex
                 h="auto"
-                pr={{ base: "0", lg: "8" }}
+                pr={{ base: "0", lg: ImagePositionPaddingRightMapper[imagePosition] }}
+                pl={{ base: "0", lg: ImagePositionPaddingLeftMapper[imagePosition] }}
                 direction="column"
                 justifyContent="space-between"
                 flex={{ base: 1, lg: 0.6 }}
@@ -105,7 +126,12 @@ export const FeaturedProjectCard: FC<Props> = ({
                 </Flex>
             </Flex>
 
-            <Box display={{ base: "none", lg: "block" }} flex={{ base: 1, lg: 0.7 }} pl={{ base: "0", lg: "8" }}>
+            <Box
+                display={{ base: "none", lg: "block" }}
+                flex={{ base: 1, lg: 0.6 }}
+                pl={{ base: "0", lg: ImagePositionPaddingRightMapper[imagePosition] }}
+                pr={{ base: "0", lg: ImagePositionPaddingLeftMapper[imagePosition] }}
+            >
                 <Image borderRadius="xl" src={image} />
             </Box>
         </Flex>

@@ -2,6 +2,10 @@ import { FC } from "react";
 
 import { Badge, Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
+import { Date } from "shared/date/Date";
+import { LiveDemo } from "shared/live-demo/LiveDemo";
+import { Tags } from "shared/tags/Tags";
+import { ReadMore } from "shared/read-more/ReadMore";
 
 export enum ImagePosition {
     Right,
@@ -67,57 +71,24 @@ export const FeaturedProjectCard: FC<Props> = ({
                 flex={{ base: 1, lg: 0.6 }}
             >
                 <Box>
-                    <Flex justifyContent="space-between" alignItems="center">
-                        <Text fontSize="sm" fontWeight="700" opacity="0.5" as="span">
-                            {year}
-                        </Text>
-                        {demo && (
-                            <Button
-                                variant="link"
-                                leftIcon={<LinkIcon fontSize="14pt" />}
-                                onClick={() => onLinkPress(demo)}
-                            >
-                                Live Demo
-                            </Button>
-                        )}
-                    </Flex>
                     <Heading>{title}</Heading>
+
+                    <Flex justifyContent="space-between" alignItems="center" pt="1">
+                        <Date year={year} />
+                        {demo && <LiveDemo demo={demo} />}
+                    </Flex>
 
                     <Box py="4" display={{ base: "block", lg: "none" }}>
                         <Image borderRadius="xl" src={image} />
                     </Box>
 
-                    <Text fontSize="lg" pt={{ base: 0, lg: "3" }}>
+                    <Text fontSize="lg" pt={{ base: 0, lg: "2" }}>
                         {description}
                     </Text>
-                    <Flex py="2" wrap="wrap" gap="4">
-                        {tags.map((tag) => (
-                            <Badge
-                                textTransform="capitalize"
-                                key={`${id}-tag-${tag}`}
-                                colorScheme="gray"
-                                borderRadius="md"
-                                px="8px"
-                                py="4px"
-                                fontSize="sm"
-                                fontWeight="600"
-                            >
-                                {tag}
-                            </Badge>
-                        ))}
-                    </Flex>
+                    <Tags tags={tags} id={id} />
                 </Box>
                 <Flex justifyContent="space-between" pt="4">
-                    {readMore && (
-                        <Button
-                            variant="link"
-                            colorScheme="black"
-                            rightIcon={<ArrowRightIcon fontSize="16pt" />}
-                            onClick={() => onLinkPress(readMore)}
-                        >
-                            Read More
-                        </Button>
-                    )}
+                    {readMore && <ReadMore link={readMore} />}
                     {github && (
                         <Button variant="link" leftIcon={<GitHubIcon />} onClick={() => onLinkPress(github)}>
                             GitHub

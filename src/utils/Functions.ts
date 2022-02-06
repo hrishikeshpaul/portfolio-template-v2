@@ -1,6 +1,6 @@
 import { configs } from "shared/content/Content";
 
-const open = (link: string) => window.open(link, "_blank");
+export const open = (link: string) => window.open(link, "_blank");
 
 export const onResumeOpen = () => {
     open(configs.common.resume);

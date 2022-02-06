@@ -6,7 +6,7 @@
         "demo": "https://hubmapconsortium.github.io/ccf-asct-reporter/",
         "github": "https://github.com/hrishikeshpaul/ccf-asct-reporter",
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
-        "description": "A powerful visualization tool to envision large biomedical datasets for researchers, doctors and various subject matter experts.",
+        "description": "A collaboration with the NIH to build visualization tool to envision large biomedical datasets for researchers, doctors and experts.",
         "readMore": "https://iampaul.web.app/projects/asctb-reporter",
         "image": "/assets/featured-projects/asctb.png"
     },
@@ -24,7 +24,8 @@
             "Docker Hub",
             "Jenkins",
             "Kubernetes",
-            "Google Kubernetes Engine"
+            "GKE",
+            "GCP"
         ],
         "demo": "http://34.69.102.109/",
         "github": "https://github.com/hrishikeshpaul/scrapbook",

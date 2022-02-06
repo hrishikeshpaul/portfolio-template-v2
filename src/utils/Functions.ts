@@ -13,3 +13,7 @@ export const onLinkedinOpen = () => {
 export const onGitHubOpen = () => {
     open(configs.common.github);
 };
+
+export const onMailTo = () => {
+    open("mailto:" + configs.common.email);
+};

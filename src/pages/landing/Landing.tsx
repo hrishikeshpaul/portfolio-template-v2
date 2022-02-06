@@ -17,7 +17,7 @@ import {
 import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
 import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
-import { onGitHubOpen, onLinkedinOpen, onResumeOpen } from "utils/Functions";
+import { onGitHubOpen, onLinkedinOpen, onMailTo, onResumeOpen } from "utils/Functions";
 
 const iconButtonStyles = {
     fontSize: "2xl",
@@ -37,10 +37,6 @@ export const Landing: FC = () => {
         if (featuredHeader) {
             featuredHeader.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-    };
-
-    const onMail = () => {
-        window.open("mailto:" + configs.common.email);
     };
 
     return (
@@ -75,7 +71,7 @@ export const Landing: FC = () => {
                                 fontSize="3xl"
                                 aria-label="mail-icon"
                                 icon={<MailIcon />}
-                                onClick={onMail}
+                                onClick={onMailTo}
                             />
                         </HStack>
                     </Stack>

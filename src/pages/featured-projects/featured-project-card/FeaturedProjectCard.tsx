@@ -1,11 +1,8 @@
 import { FC } from "react";
 
-import { Badge, Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
-import { Date } from "shared/date/Date";
-import { LiveDemo } from "shared/live-demo/LiveDemo";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Tags } from "shared/tags/Tags";
-import { ReadMore } from "shared/read-more/ReadMore";
+import { ProjectCardFooter } from "shared/project-card-footer/ProjectCardFooter";
 
 export enum ImagePosition {
     Right,
@@ -42,7 +39,6 @@ const ImagePositionPaddingLeftMapper: Record<ImagePosition, string> = {
 export const FeaturedProjectCard: FC<Props> = ({
     id,
     title,
-    year,
     demo,
     github,
     tags,
@@ -51,10 +47,6 @@ export const FeaturedProjectCard: FC<Props> = ({
     image,
     imagePosition,
 }) => {
-    const onLinkPress = (link: string) => {
-        window.open(link, "_blank");
-    };
-
     return (
         <Flex
             justifyContent="space-between"
@@ -73,28 +65,15 @@ export const FeaturedProjectCard: FC<Props> = ({
                 <Box>
                     <Heading>{title}</Heading>
 
-                    <Flex justifyContent="space-between" alignItems="center" pt="1">
-                        <Date year={year} />
-                        {demo && <LiveDemo demo={demo} />}
-                    </Flex>
-
-                    <Box py="4" display={{ base: "block", lg: "none" }}>
-                        <Image borderRadius="xl" src={image} />
-                    </Box>
+                    <Image borderRadius="xl" src={image} py="4" display={{ base: "block", lg: "none" }} />
 
                     <Text fontSize="lg" pt={{ base: 0, lg: "2" }}>
                         {description}
                     </Text>
                     <Tags tags={tags} id={id} />
                 </Box>
-                <Flex justifyContent="space-between" pt="4">
-                    {readMore && <ReadMore link={readMore} />}
-                    {github && (
-                        <Button variant="link" leftIcon={<GitHubIcon />} onClick={() => onLinkPress(github)}>
-                            GitHub
-                        </Button>
-                    )}
-                </Flex>
+
+                <ProjectCardFooter readMore={readMore} github={github} demo={demo} />
             </Flex>
 
             <Box

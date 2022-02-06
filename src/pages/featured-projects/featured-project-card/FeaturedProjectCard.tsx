@@ -63,9 +63,13 @@ export const FeaturedProjectCard: FC<Props> = ({
                 flex={{ base: 1, lg: 0.6 }}
             >
                 <Box>
-                    <Heading>{title}</Heading>
+                    <Heading fontSize="4xl" lineHeight="1">
+                        {title}
+                    </Heading>
 
-                    <Image borderRadius="xl" src={image} py="4" display={{ base: "block", lg: "none" }} />
+                    <Box py="4" display={{ base: "inherit", lg: "none" }}>
+                        <Image borderRadius="xl" src={image} />
+                    </Box>
 
                     <Text fontSize="lg" pt={{ base: 0, lg: "2" }}>
                         {description}

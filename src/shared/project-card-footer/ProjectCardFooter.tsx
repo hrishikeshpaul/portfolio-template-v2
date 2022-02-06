@@ -72,8 +72,6 @@ export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo, buttonSiz
                 <LiveDemo demo={demo} />
                 <GitHubButton github={github} />
             </Flex>
-            {/* <LiveDemo buttonSize={buttonSize} display={{ base: "flex", md: "none" }} demo={demo} />
-            <GitHubButton buttonSize={buttonSize} display={{ base: "flex", md: "none" }} github={github} /> */}
 
             <ReadMore readMore={readMore} />
         </Flex>

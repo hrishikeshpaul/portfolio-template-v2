@@ -21,7 +21,7 @@ export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, des
             alignItems={{ base: "flex-start", lg: "center" }}
             gap="10"
             id={`other-project-card-${id}`}
-            py={{ base: "12", md: "28" }}
+            py={{ base: "4", md: "8" }}
         >
             <Avatar ignoreFallback src={image} size="2xl" display={{ base: "none", md: "block" }} />
             <Flex w="100%" direction="column" alignContent="center">

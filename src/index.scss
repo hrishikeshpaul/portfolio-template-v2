@@ -13,8 +13,7 @@ body,
     auto;
 
   *::selection {
-    // color: red;
-    background: var(--hp-colors-red-200);
+    background: var(--hp-colors-orange-200);
     transition: all 0.25s ease-in-out !important;
   }
 }

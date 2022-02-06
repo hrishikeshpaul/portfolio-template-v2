@@ -4,7 +4,16 @@ import { Center, Container, Heading, Image, HStack, Button, Stack, IconButton, I
 
 import { configs, useContent, ContentFile } from "content";
 import { Content } from "shared/content/Content";
-import { ChevronDownIcon, GitHubIcon, LinkedInIcon } from "utils/Icons";
+import { ChevronDownIcon, GitHubIcon, LinkedInIcon, MailIcon } from "utils/Icons";
+
+const iconButtonStyles = {
+    fontSize: "2xl",
+    variant: "ghost",
+    color: "gray.700",
+    bg: "transparent",
+    _hover: { color: "primary.500" },
+    _active: { bg: "transparent" },
+};
 
 export const Landing: FC = () => {
     const content = useContent(ContentFile.Landing);
@@ -15,6 +24,10 @@ export const Landing: FC = () => {
         if (featuredHeader) {
             featuredHeader.scrollIntoView({ behavior: "smooth", block: "center" });
         }
+    };
+
+    const onLinkOpen = (link: string) => {
+        window.open(link, "_blank");
     };
 
     return (
@@ -29,26 +42,32 @@ export const Landing: FC = () => {
                             <Content fontSize="lg">{content.landing}</Content>
                         </Stack>
                         <HStack spacing="2">
-                            <Button size="lg" borderRadius="xl" mr="2">
+                            <Button
+                                size="lg"
+                                borderRadius="xl"
+                                mr="2"
+                                onClick={() => onLinkOpen(configs.common.resume)}
+                            >
                                 Resume
                             </Button>
                             <IconButton
-                                fontSize="2xl"
-                                variant="ghost"
-                                color="gray.700"
-                                bg="transparent"
-                                _hover={{ color: "primary.500" }}
+                                {...iconButtonStyles}
                                 aria-label="linkedin-icon"
                                 icon={<LinkedInIcon />}
+                                onClick={() => onLinkOpen(configs.common.linkedin)}
                             />
                             <IconButton
-                                fontSize="2xl"
-                                bg="transparent"
-                                _hover={{ color: "primary.500" }}
-                                variant="ghost"
-                                color="gray.700"
+                                {...iconButtonStyles}
                                 aria-label="github-icon"
                                 icon={<GitHubIcon />}
+                                onClick={() => onLinkOpen(configs.common.github)}
+                            />
+                            <IconButton
+                                {...iconButtonStyles}
+                                fontSize="3xl"
+                                aria-label="mail-icon"
+                                icon={<MailIcon />}
+                                onClick={() => onLinkOpen(configs.common.email)}
                             />
                         </HStack>
                     </Stack>

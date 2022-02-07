@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 
-import { Text, Stack, StyleProps, Link, UnorderedList, List } from "@chakra-ui/react";
+import { Text, Stack, StyleProps, Link, UnorderedList } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 
 import common from "content/common/common.json";

@@ -1,14 +1,7 @@
 import { FC } from "react";
 
-import {
-    Button,
-    Flex,
-    IconButton,
-    ColorMode,
-    useBreakpointValue,
-    useColorMode,
-    useColorModeValue,
-} from "@chakra-ui/react";
+import { Button, Flex, IconButton, useBreakpointValue } from "@chakra-ui/react";
+
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 import { open } from "utils/Functions";
 
@@ -45,14 +38,12 @@ export const ReadMore: FC<ReadMoreProps> = ({ readMore }) => {
 
 export const GitHubButton: FC<GitHubButtonProps> = ({ github, display }) => {
     const as = useBreakpointValue({ base: IconButton, md: Button });
-    const colorMode = useColorModeValue("gray", "red");
 
     return github ? (
         <Button
             data-aos="fade"
             data-aos-delay="400"
             as={as}
-            // colorScheme={colorMode}
             variant="secondary"
             py="5"
             display={display}

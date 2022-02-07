@@ -69,7 +69,15 @@ export const FeaturedProjectCard: FC<Props> = ({
                     <Heading data-aos="fade-down" data-aos-offset="200" fontSize="4xl" lineHeight="1">
                         {title}
                     </Heading>
-                    <Text pt="2" fontSize="sm">
+                    <Text
+                        pt="2"
+                        fontSize="sm"
+                        fontWeight="600"
+                        opacity="0.6"
+                        data-aos="fade"
+                        data-aos-delay="100"
+                        data-aos-offset="200"
+                    >
                         {year} • {location}
                     </Text>
 

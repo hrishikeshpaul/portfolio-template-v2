@@ -63,7 +63,7 @@ export const LiveDemo: FC<LiveDemoProps> = ({ demo, display }) => {
 
 export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo }) => {
     return (
-        <Flex justifyContent={readMore ? "space-between" : "flex-end"} alignItems="center" py="4">
+        <Flex justifyContent={readMore ? "space-between" : "flex-end"} alignItems="center" pt="8">
             <ReadMore readMore={readMore} />
             <Flex gap="4" justifyContent="space-between" display={demo || github ? "flex" : "none"}>
                 <LiveDemo demo={demo} />

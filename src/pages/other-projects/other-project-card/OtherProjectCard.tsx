@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Avatar, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Image, Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { Tags } from "shared/tags/Tags";
 import { ProjectCardFooter } from "shared/project-card-footer/ProjectCardFooter";
 
@@ -21,10 +21,12 @@ export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, des
             alignItems={{ base: "flex-start", lg: "center" }}
             gap="10"
             id={`other-project-card-${id}`}
-            py={{ base: "4", md: "8" }}
+            py={{ base: "8", md: "8" }}
         >
-            <Avatar ignoreFallback src={image} size="2xl" display={{ base: "none", md: "block" }} />
-            <Flex w="100%" direction="column" alignContent="center">
+            <Box flex="0.25" display={{ base: "none", md: "block" }}>
+                <Image ignoreFallback src={image} />
+            </Box>
+            <Flex w="100%" direction="column" alignContent="center" flex={1}>
                 <Box>
                     <Heading fontSize="2xl">{title}</Heading>
                     <Text pt="2">{description}</Text>

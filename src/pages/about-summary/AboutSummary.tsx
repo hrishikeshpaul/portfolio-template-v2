@@ -14,7 +14,7 @@ export const AboutSummary: FC = () => {
                 <Box flex="0.85">
                     <Heading>{configs.common.name}</Heading>
                     <Text fontWeight="bold" opacity="0.5">
-                        /ri-shi-kaysh/
+                        {configs.common.pronunciation}
                     </Text>
                     <Box pt="4">
                         <Content fontSize="lg">{content.aboutSummary}</Content>

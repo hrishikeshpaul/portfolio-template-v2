@@ -23,13 +23,17 @@ export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, des
             id={`other-project-card-${id}`}
             py={{ base: "8", md: "8" }}
         >
-            <Box flex="0.25" display={{ base: "none", md: "block" }}>
+            <Box flex="0.25" display={{ base: "none", md: "block" }} data-aos="fade-up" data-aos-offset="200">
                 <Image ignoreFallback src={image} />
             </Box>
             <Flex w="100%" direction="column" alignContent="center" flex={1}>
                 <Box>
-                    <Heading fontSize="2xl">{title}</Heading>
-                    <Text pt="2">{description}</Text>
+                    <Heading fontSize="2xl" data-aos="fade-down" data-aos-offset="200">
+                        {title}
+                    </Heading>
+                    <Text pt="2" data-aos="fade-up" data-aos-delay="200" data-aos-offset="200">
+                        {description}
+                    </Text>
                     <Tags tags={tags} id={id} size="xs" />
                 </Box>
                 <ProjectCardFooter readMore={readMore} github={github} demo={demo} />

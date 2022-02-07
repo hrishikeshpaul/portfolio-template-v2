@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { Image, Box, Flex, Heading, Text } from "@chakra-ui/react";
+
 import { Tags } from "shared/tags/Tags";
 import { ProjectCardFooter } from "shared/project-card-footer/ProjectCardFooter";
 

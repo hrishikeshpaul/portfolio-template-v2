@@ -35,8 +35,8 @@ export const Landing: FC = () => {
                                 {content.landing}
                             </Content>
                         </Stack>
-                        <Box data-aos="fade-down" data-aos-delay="600">
-                            <Socials />
+                        <Box>
+                            <Socials delay={1000} />
                         </Box>
                     </Stack>
                     <Container
@@ -50,7 +50,7 @@ export const Landing: FC = () => {
                     </Container>
                 </HStack>
             </Center>
-            <Flex justifyContent="center" data-aos="fade" data-aos-delay="1000">
+            <Flex justifyContent="center" data-aos="fade" data-aos-delay="1400">
                 <Icon
                     fontSize="3xl"
                     cursor="pointer"

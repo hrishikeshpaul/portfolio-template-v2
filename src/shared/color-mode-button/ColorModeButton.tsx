@@ -13,16 +13,17 @@ export const ColorModeButton: FC<StyleProps> = (props) => {
             <IconButton
                 aria-label="appearance"
                 bg="transparent"
-                color="color"
+                color={color}
                 fontSize="lg"
-                _hover={{ color: "primary.100" }}
+                _hover={{ color: "primary.500" }}
                 _active={{ bg: "transparent" }}
                 icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 variant="ghost"
                 size="xs"
                 onClick={() => {
                     toggleColorMode();
-                    window.location.reload();
+                    window.scrollBy(0, 1);
+                    window.scrollBy(0, -1);
                 }}
             />
         </HStack>

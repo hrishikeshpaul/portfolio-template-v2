@@ -35,9 +35,8 @@ export const Landing: FC = () => {
                                 {content.landing}
                             </Content>
                         </Stack>
-                        <Box>
-                            <Socials delay={1000} />
-                        </Box>
+                        
+                        <Socials delay={1000} />
                     </Stack>
                     <Container
                         alignItems="center"

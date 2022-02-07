@@ -1,10 +1,11 @@
 import { ThemeConfig, extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
-import { PrimaryColors } from "theme/colors/Colors";
+import { PrimaryColors, PrimaryDarkColors } from "theme/colors/Colors";
 import { components } from "theme/component-styles/ComponentStyles";
 
 const config: ThemeConfig = {
     cssVarPrefix: "hp",
+    initialColorMode: 'dark',
 };
 
 const fonts = {
@@ -15,6 +16,9 @@ const fonts = {
 const colors = {
     primary: {
         ...PrimaryColors,
+    },
+    gray: {
+        ...PrimaryDarkColors,
     },
 };
 

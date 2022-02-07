@@ -3,6 +3,7 @@
         "id": "featured-project-asctb-reporter",
         "title": "ASCT+B Reporter",
         "year": "Jun 2020 - Jun 2021",
+        "location": "Indiana University",
         "demo": "https://hubmapconsortium.github.io/ccf-asct-reporter/",
         "github": "https://github.com/hrishikeshpaul/ccf-asct-reporter",
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
@@ -14,6 +15,8 @@
         "id": "featured-project-scrapbook",
         "title": "Scrapbook",
         "year": "Jan 2021 - May 2021",
+        "location": "Indiana University",
+
         "tags": [
             "Angular 11",
             "Flask",
@@ -35,6 +38,7 @@
     },
     {
         "id": "featured-project-measure-ux",
+        "location": "Indiana University",
         "title": "Measuring User Experience",
         "year": "Sep 2020 - Dec 2020",
         "tags": ["UX Research", "User Journey", "Surveys", "Interviews", "Adobe XD"],

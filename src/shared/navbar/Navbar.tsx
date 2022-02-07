@@ -10,6 +10,7 @@ import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
+    const navItemColor = useColorModeValue("gray.800", "white");
     const currentPage = useScroll();
 
     const toSection = (section: string) => {
@@ -24,7 +25,7 @@ export const Navbar: FC = () => {
                     <HStack spacing="8">
                         <Button
                             variant="link"
-                            color="black"
+                            color={navItemColor}
                             transition="all 0.25s ease-in-out"
                             textDecoration="underline"
                             textDecorationThickness="2px"
@@ -37,7 +38,7 @@ export const Navbar: FC = () => {
                         </Button>
                         <Button
                             variant="link"
-                            color="black"
+                            color={navItemColor}
                             textDecoration={currentPage === AboutPageId ? "underline" : "none"}
                             textDecorationThickness="2px"
                             textDecorationColor="primary.500"

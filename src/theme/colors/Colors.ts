@@ -15,3 +15,16 @@ export const PrimaryColors: ColorHues = {
     800: "#A00003",
     900: "#870002",
 };
+
+export const PrimaryDarkColors: ColorHues = {
+    50: "#F0F0F0",
+    100: "#EDECEC",
+    200: "#CFCCCC",
+    300: "#999191",
+    400: "#706868",
+    500: "#A9A2A2",
+    600: "#464141",
+    700: "#262323",
+    800: "#121111",
+    900: "#0A0909",
+};

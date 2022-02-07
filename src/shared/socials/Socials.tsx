@@ -1,5 +1,7 @@
-import { Button, HStack, IconButton } from "@chakra-ui/react";
 import { FC } from "react";
+
+import { Button, HStack, IconButton, useColorModeValue } from "@chakra-ui/react";
+
 import { configs } from "shared/content/Content";
 import { onResumeOpen, open } from "utils/Functions";
 import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, YoutubeIcon } from "utils/Icons";
@@ -20,6 +22,8 @@ interface Props {
 }
 
 export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
+    const iconColor = useColorModeValue("gray.700", "white");
+
     return (
         <HStack spacing="6">
             {resume && (
@@ -37,7 +41,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                             minWidth="0"
                             bg="transparent"
                             fontSize="2xl"
-                            color="gray.700"
+                            color={iconColor}
                             _hover={{ color: "primary.500" }}
                             _active={{ bg: "transparent" }}
                             aria-label={`${social.type}-icon`}

@@ -12,6 +12,7 @@ interface Props {
     id: string;
     title: string;
     year: string;
+    location: string;
     demo?: string;
     github?: string;
     tags: string[];
@@ -46,6 +47,8 @@ export const FeaturedProjectCard: FC<Props> = ({
     readMore,
     image,
     imagePosition,
+    location,
+    year,
 }) => {
     return (
         <Flex
@@ -66,6 +69,9 @@ export const FeaturedProjectCard: FC<Props> = ({
                     <Heading data-aos="fade-down" data-aos-offset="200" fontSize="4xl" lineHeight="1">
                         {title}
                     </Heading>
+                    <Text pt="2" fontSize="sm">
+                        {year} • {location}
+                    </Text>
 
                     <Box
                         py="4"

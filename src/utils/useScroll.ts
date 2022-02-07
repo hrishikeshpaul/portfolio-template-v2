@@ -9,10 +9,6 @@ export enum Page {
 }
 
 const pageIds = [WorkPageId, AboutPageId];
-const PageIdToHash: Record<string, string> = {
-    "#work": WorkPageId,
-    "#about": AboutPageId,
-};
 
 export const useScroll = () => {
     const [page, setPage] = useState<string>("");
@@ -20,7 +16,6 @@ export const useScroll = () => {
     const scrollHandler = () => {
         const documentTop = document.scrollingElement?.scrollTop!;
         const pages = pageIds.map((page) => document.getElementById(page));
-        console.log(documentTop);
         let newPage = "";
 
         pages.forEach((page) => {

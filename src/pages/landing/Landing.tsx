@@ -30,7 +30,12 @@ export const Landing: FC = () => {
                         </Stack>
                         <Socials />
                     </Stack>
-                    <Container alignItems="center" flex="0.4" display={{ base: "none", lg: "block" }}>
+                    <Container
+                        alignItems="center"
+                        flex="0.4"
+                        display={{ base: "none", lg: "block" }}
+                        data-aos="fade-up"
+                    >
                         <Image borderRadius="xl" src={configs.landing.picture} />
                     </Container>
                 </HStack>

@@ -1,6 +1,7 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import { Box, Container } from "@chakra-ui/react";
+import AOS from "aos";
 
 import { Navbar } from "shared/navbar/Navbar";
 import { Landing } from "pages/landing/Landing";
@@ -13,8 +14,13 @@ import { AboutSummary } from "pages/about-summary/AboutSummary";
 import { AboutPageId, WorkPageId } from "utils/useScroll";
 
 import "./App.scss";
+import "aos/dist/aos.css";
 
 export const App: FC = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <Container h="100%" px={{ base: 6, md: 24, lg: 6 }}>
             <Navbar />

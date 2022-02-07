@@ -41,6 +41,7 @@ export const GitHubButton: FC<GitHubButtonProps> = ({ github, display }) => {
             as={as}
             colorScheme="gray"
             color="black"
+            py="5"
             display={display}
             leftIcon={<GitHubIcon />}
             icon={<GitHubIcon />}
@@ -55,7 +56,13 @@ export const LiveDemo: FC<LiveDemoProps> = ({ demo, display }) => {
     const as = useBreakpointValue({ base: IconButton, md: Button });
 
     return demo ? (
-        <Button as={as} display={display} leftIcon={<LinkIcon />} icon={<LinkIcon />} onClick={() => open(demo)}>
+        <Button
+            as={as}
+            display={display}
+            leftIcon={<LinkIcon fontSize="14pt" />}
+            icon={<LinkIcon fontSize="14pt" />}
+            onClick={() => open(demo)}
+        >
             Live Demo
         </Button>
     ) : null;
@@ -65,7 +72,7 @@ export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo }) => {
     return (
         <Flex justifyContent={readMore ? "space-between" : "flex-end"} alignItems="center" pt="8">
             <ReadMore readMore={readMore} />
-            <Flex gap="4" justifyContent="space-between" display={demo || github ? "flex" : "none"}>
+            <Flex gap="4" justifyContent="space-between" alignItems="center" display={demo || github ? "flex" : "none"}>
                 <LiveDemo demo={demo} />
                 <GitHubButton github={github} />
             </Flex>

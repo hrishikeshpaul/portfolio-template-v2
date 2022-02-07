@@ -7,6 +7,7 @@ import common from "content/common/common.json";
 import landing from "content/landing/landing-config.json";
 import featuredProjects from "content/featured-projects/featured-projects-config.json";
 import otherProjects from "content/other-projects/other-projects-config.json";
+import aboutSummary from 'content/about-summary/about-summary-config.json';
 
 import LandingMd from "content/landing/landing.md";
 import AboutSummaryMd from "content/about-summary/about-summary.md";
@@ -16,6 +17,7 @@ export const configs = {
     landing,
     featuredProjects,
     otherProjects,
+    aboutSummary,
 };
 
 interface State {

@@ -25,7 +25,7 @@ export const useScroll = () => {
 
         pages.forEach((page) => {
             if (page) {
-                const top = page.offsetTop + 150;
+                const top = page.offsetTop;
                 const height = page.clientHeight;
 
                 if (top < documentTop && top + height > documentTop) {

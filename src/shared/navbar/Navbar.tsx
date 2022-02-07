@@ -12,6 +12,10 @@ export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
     const currentPage = useScroll();
 
+    const toSection = (section: string) => {
+        document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
             <Container py="4" px="6">
@@ -25,6 +29,7 @@ export const Navbar: FC = () => {
                             textDecoration="underline"
                             textDecorationThickness="2px"
                             textDecorationColor={currentPage === WorkPageId ? "primary.500" : "transparent"}
+                            onClick={() => toSection(WorkPageId)}
                         >
                             Work
                         </Button>
@@ -34,6 +39,7 @@ export const Navbar: FC = () => {
                             textDecoration={currentPage === AboutPageId ? "underline" : "none"}
                             textDecorationThickness="2px"
                             textDecorationColor="primary.500"
+                            onClick={() => toSection(AboutPageId)}
                         >
                             About
                         </Button>

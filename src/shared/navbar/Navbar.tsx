@@ -18,8 +18,8 @@ export const Navbar: FC = () => {
     };
 
     return (
-        <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
-            <Container py="4" px="6" data-aos="fade-down" data-aos-duration="500">
+        <Box position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
+            <Container py="4" bg={bg} px="6" data-aos="fade-down" data-aos-duration="500">
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
                     <HStack spacing="8">

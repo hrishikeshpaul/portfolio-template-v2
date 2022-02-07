@@ -17,10 +17,10 @@ export const PrimaryColors: ColorHues = {
 };
 
 export const PrimaryDarkColors: ColorHues = {
-    50: "#F0F0F0",
-    100: "#EDECEC",
-    200: "#CFCCCC",
-    300: "#999191",
+    50: "#F5F5F5",
+    100: "#F0EEEE",
+    200: "#ECE7E7",
+    300: "#D5CCCD",
     400: "#706868",
     500: "#A9A2A2",
     600: "#464141",

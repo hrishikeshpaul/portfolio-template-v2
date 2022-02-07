@@ -9,13 +9,13 @@ interface Props {
     delay?: number;
 }
 
-export const Tags: FC<Props> = ({ id, tags, size = "sm", delay = 400 }) => {
+export const Tags: FC<Props> = ({ id, tags, size = "sm" }) => {
     return (
         <Flex py="2" wrap="wrap" gap="4">
             {tags.map((tag, idx) => (
                 <Badge
-                    data-aos="fade"
-                    data-aos-delay={idx * 100 + delay}
+                    data-aos="flip-left"
+                    data-aos-delay={idx * 50}
                     textTransform="capitalize"
                     key={`${id}-tag-${tag}`}
                     colorScheme="gray"

@@ -94,6 +94,8 @@ export const FeaturedProjectCard: FC<Props> = ({
             </Flex>
 
             <Box
+                data-aos="fade-up"
+                data-aos-offset="200"
                 display={{ base: "none", lg: "block" }}
                 flex={{ base: 1, lg: 0.6 }}
                 pl={{ base: "0", lg: ImagePositionPaddingRightMapper[imagePosition] }}

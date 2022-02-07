@@ -17,12 +17,24 @@ const ButtonStyles: ComponentStyleConfig = {
         fontWeight: "bold",
     },
     variants: {
-        outline: (props: any) => ({
-            _hover: {
-                color: "white",
-                bg: `${props.colorScheme}.500`,
-            },
-        }),
+        solid: {
+            color: "white",
+        },
+        secondary: (props: any) => {
+            return {
+                color: props.colorMode === "dark" ? "white" : "gray.900",
+                backgroundColor: props.colorMode === "dark" ? "gray.700" : "gray.50",
+                _hover: {
+                    backgroundColor: props.colorMode === "dark" ? "gray.600" : "gray.100",
+                },
+                _active: {
+                    backgroundColor: props.colorMode === "dark" ? "gray.600" : "gray.200",
+                },
+            };
+        },
+    },
+    defaultProps: {
+        variant: "solid",
     },
 };
 

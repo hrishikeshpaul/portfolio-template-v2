@@ -8,3 +8,4 @@ export {
 } from "react-icons/fa";
 export { FiChevronDown as ChevronDownIcon, FiChevronUp as ChevronUpIcon } from "react-icons/fi";
 export { HiArrowSmRight as ArrowRightIcon, HiOutlineMail as MailIcon } from "react-icons/hi";
+export { IoMoon as MoonIcon, IoSunny as SunIcon } from "react-icons/io5";

@@ -30,6 +30,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude }) => {
                 (social) =>
                     !exclude?.includes(social.type) && (
                         <IconButton
+                            key={social.type}
                             minWidth="0"
                             bg="transparent"
                             fontSize="2xl"

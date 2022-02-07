@@ -10,6 +10,7 @@ import { NavbarHeight } from "theme";
 import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 import { OtherProjects } from "pages/other-projects/OtherProjects";
 import { AboutSummary } from "pages/about-summary/AboutSummary";
+import { AboutPageId, WorkPageId } from "utils/useScroll";
 
 import "./App.scss";
 
@@ -19,12 +20,17 @@ export const App: FC = () => {
             <Navbar />
             <Box mt={{ base: "96px", md: NavbarHeight }}>
                 <Landing />
-                <PageHeader id="page-featured-projects" label="Featured Projects" />
-                <FeaturedProjects />
-                <PageHeader id="page-other-projects" label="Other Projects" />
-                <OtherProjects />
-                <PageHeader id="page-about-me" label="About Me" />
-                <AboutSummary />
+                <Box id={WorkPageId}>
+                    <PageHeader label="Featured Projects" />
+                    <FeaturedProjects />
+                    <PageHeader id="page-other-projects" label="Other Projects" />
+                    <OtherProjects />
+                </Box>
+
+                <Box id={AboutPageId}>
+                    <PageHeader label="About Me" />
+                    <AboutSummary />
+                </Box>
             </Box>
             <Footer />
         </Container>

@@ -6,7 +6,7 @@ import { configs, Content, MarkdownFile, useContent } from "shared/content/Conte
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
     return (
-        <Box>
+        <Box h="100vh">
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
                 <Box flex="0.35">
                     <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" />

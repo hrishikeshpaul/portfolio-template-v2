@@ -63,15 +63,28 @@ export const FeaturedProjectCard: FC<Props> = ({
                 flex={{ base: 1, lg: 0.6 }}
             >
                 <Box>
-                    <Heading fontSize="4xl" lineHeight="1">
+                    <Heading data-aos="fade-down" data-aos-offset="200" fontSize="4xl" lineHeight="1">
                         {title}
                     </Heading>
 
-                    <Box py="4" display={{ base: "inherit", lg: "none" }}>
+                    <Box
+                        py="4"
+                        display={{ base: "inherit", lg: "none" }}
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="200"
+                    >
                         <Image borderRadius="xl" src={image} />
                     </Box>
 
-                    <Text fontSize="lg" pt={{ base: 0, lg: "2" }}>
+                    <Text
+                        fontSize="lg"
+                        pt={{ base: 0, lg: "2" }}
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="200"
+                        borderRadius="xl"
+                    >
                         {description}
                     </Text>
                     <Tags tags={tags} id={id} />

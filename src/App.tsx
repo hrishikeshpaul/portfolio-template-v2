@@ -18,7 +18,7 @@ import "aos/dist/aos.css";
 
 export const App: FC = () => {
     useEffect(() => {
-        AOS.init();
+        AOS.init({ once: true });
     }, []);
 
     return (

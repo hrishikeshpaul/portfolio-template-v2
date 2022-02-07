@@ -16,9 +16,10 @@ const LinksToIconMapper: Record<string, JSX.Element> = {
 interface Props {
     resume?: boolean;
     exclude?: Array<string>;
+    delay?: number;
 }
 
-export const Socials: FC<Props> = ({ resume = true, exclude }) => {
+export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
     return (
         <HStack spacing="6">
             {resume && (
@@ -31,7 +32,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude }) => {
                     !exclude?.includes(social.type) && (
                         <IconButton
                             data-aos="fade"
-                            data-aos-delay={idx * 100 + 800}
+                            data-aos-delay={idx * 100 + delay}
                             key={social.type}
                             minWidth="0"
                             bg="transparent"
@@ -47,14 +48,4 @@ export const Socials: FC<Props> = ({ resume = true, exclude }) => {
             )}
         </HStack>
     );
-};
-
-Socials.defaultProps = {
-    // resume: false,
-    // github: false,
-    // linkedin: false,
-    // mail: false,
-    // youtube: false,
-    // facebook: false,
-    // instagram: false,
 };

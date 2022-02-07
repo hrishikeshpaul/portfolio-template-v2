@@ -21,7 +21,7 @@ export const PageHeader: FC<Props> = ({ id, label }) => {
                 borderColor,
                 width: "5rem",
                 margin: "auto",
-                marginRight: '0.5rem',
+                marginRight: "0.5rem",
                 transform: "translateY(-0.35rem)",
             }}
             textTransform="uppercase"

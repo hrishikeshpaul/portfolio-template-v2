@@ -22,14 +22,16 @@ export const Socials: FC<Props> = ({ resume = true, exclude }) => {
     return (
         <HStack spacing="6">
             {resume && (
-                <Button size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
+                <Button data-aos="fade" data-aos-delay="700" size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
                     Resume
                 </Button>
             )}
             {configs.common.socials.map(
-                (social) =>
+                (social, idx) =>
                     !exclude?.includes(social.type) && (
                         <IconButton
+                            data-aos="fade"
+                            data-aos-delay={idx * 100 + 800}
                             key={social.type}
                             minWidth="0"
                             bg="transparent"

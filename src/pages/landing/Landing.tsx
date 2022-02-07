@@ -23,24 +23,34 @@ export const Landing: FC = () => {
                 <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                     <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                         <Stack spacing="8">
-                            <Heading fontSize={{ base: "5xl", md: "7xl" }} lineHeight={1}>
+                            <Heading
+                                fontSize={{ base: "5xl", md: "7xl" }}
+                                lineHeight={1}
+                                data-aos="fade-down"
+                                data-aos-delay="400"
+                            >
                                 {configs.landing.headline}
                             </Heading>
-                            <Content fontSize="lg">{content.landing}</Content>
+                            <Content data-aos="fade-up" data-aos-delay="500" fontSize="lg">
+                                {content.landing}
+                            </Content>
                         </Stack>
-                        <Socials />
+                        <Box data-aos="fade-down" data-aos-delay="600">
+                            <Socials />
+                        </Box>
                     </Stack>
                     <Container
                         alignItems="center"
                         flex="0.4"
                         display={{ base: "none", lg: "block" }}
                         data-aos="fade-up"
+                        data-aos-delay="400"
                     >
                         <Image borderRadius="xl" src={configs.landing.picture} />
                     </Container>
                 </HStack>
             </Center>
-            <Flex justifyContent="center">
+            <Flex justifyContent="center" data-aos="fade" data-aos-delay="1000">
                 <Icon
                     fontSize="3xl"
                     cursor="pointer"

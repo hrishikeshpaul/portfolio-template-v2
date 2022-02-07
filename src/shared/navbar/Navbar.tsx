@@ -18,7 +18,7 @@ export const Navbar: FC = () => {
 
     return (
         <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
-            <Container py="4" px="6">
+            <Container py="4" px="6" data-aos="fade-down" data-aos-duration="500">
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
                     <HStack spacing="8">
@@ -30,6 +30,8 @@ export const Navbar: FC = () => {
                             textDecorationThickness="2px"
                             textDecorationColor={currentPage === WorkPageId ? "primary.500" : "transparent"}
                             onClick={() => toSection(WorkPageId)}
+                            data-aos="fade"
+                            data-aos-delay="200"
                         >
                             Work
                         </Button>
@@ -40,10 +42,12 @@ export const Navbar: FC = () => {
                             textDecorationThickness="2px"
                             textDecorationColor="primary.500"
                             onClick={() => toSection(AboutPageId)}
+                            data-aos="fade"
+                            data-aos-delay="300"
                         >
                             About
                         </Button>
-                        <Button variant="link" onClick={onResumeOpen}>
+                        <Button variant="link" onClick={onResumeOpen} data-aos="fade" data-aos-delay="400">
                             Resume
                         </Button>
                     </HStack>

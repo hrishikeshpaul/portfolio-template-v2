@@ -1,16 +1,14 @@
 import { FC, useState } from "react";
 
-import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
-import { Expandable } from "pages/about-summary/common/expandable/Expandable";
-import { Skills } from "./skills/Skills";
-import { Education } from "./education/Education";
+import { Skills } from "pages/about-summary//skills/Skills";
+import { Education } from "pages/about-summary//education/Education";
+import { Experience } from "pages/about-summary/experience/Expeirence";
 
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
-    const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
-    const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
 
     return (
         <Box>
@@ -40,26 +38,7 @@ export const AboutSummary: FC = () => {
                     <Education />
                 </Box>
                 <Box flex="0.6" overflow="hidden">
-                    <Heading fontSize="2xl" fontWeight="semibold">
-                        Experiences
-                    </Heading>
-                    <br />
-                    <Accordion pt="2" allowMultiple index={experiencesExpanded}>
-                        {configs.aboutSummary.experiences.map((exp, idx) => (
-                            <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.company}`}>
-                                <Expandable
-                                    id={exp.id}
-                                    title={exp.company}
-                                    subTitle={exp.position}
-                                    date={exp.duration}
-                                    content={exp.description}
-                                    idx={idx}
-                                    onChange={setExperiencesExpanded}
-                                    expanded={experiencesExpanded}
-                                />
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    <Experience />
                 </Box>
             </Flex>
             <Box pt="16">

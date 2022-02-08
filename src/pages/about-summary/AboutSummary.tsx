@@ -3,8 +3,9 @@ import { FC, useState } from "react";
 import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem, useColorModeValue } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
-import { Expandable } from "pages/about-summary/expandable/Expandable";
+import { Expandable } from "pages/about-summary/common/expandable/Expandable";
 import { Tags } from "shared/tags/Tags";
+import { Skills } from "./skills/Skills";
 
 export const AboutSummary: FC = () => {
     const titleColor = useColorModeValue("gray.600", "gray.100");
@@ -15,15 +16,17 @@ export const AboutSummary: FC = () => {
     return (
         <Box>
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
-                <Box flex="0.35">
+                <Box flex="0.35" data-aos="fade-up" data-aos-offset="200">
                     <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" />
                 </Box>
                 <Box flex="0.85">
-                    <Heading>{configs.common.name}</Heading>
-                    <Text fontWeight="bold" opacity="0.5">
+                    <Heading data-aos="fade-down" data-aos-offset="200">
+                        {configs.common.name}
+                    </Heading>
+                    <Text fontWeight="bold" opacity="0.5" data-aos="fade" data-aos-offset="200" data-aos-delay="200">
                         {configs.common.pronunciation}
                     </Text>
-                    <Box pt="4">
+                    <Box pt="4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">
                         <Content fontSize="lg">{content.aboutSummary}</Content>
                     </Box>
                 </Box>
@@ -81,18 +84,7 @@ export const AboutSummary: FC = () => {
                 </Box>
             </Flex>
             <Box pt="16">
-                <Heading fontSize="2xl" fontWeight="semibold">
-                    Skills
-                </Heading>
-                <br />
-                {configs.aboutSummary.skills.map((skill) => (
-                    <Box p="0" mb="4" key={`skills-${skill.title}`}>
-                        <Text fontWeight="bold" fontSize="lg" color={titleColor}>
-                            {skill.title}
-                        </Text>
-                        <Tags id={`skills-tags-${skill.title}`} tags={skill.tools} />
-                    </Box>
-                ))}
+                <Skills />
             </Box>
         </Box>
     );

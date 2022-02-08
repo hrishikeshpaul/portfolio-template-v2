@@ -56,11 +56,13 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 overflow="hidden"
                 display="block"
             >
-                <Text fontSize="lg" fontWeight="bold" color={titleColor}>
+                <Text fontSize="lg" fontWeight="bold" color={titleColor} data-aos="fade-up">
                     {title}
                 </Text>
-                <Text>{subTitle}</Text>
-                <Text opacity="0.6">{date}</Text>
+                <Text data-aos="fade-left">{subTitle}</Text>
+                <Text opacity="0.6" data-aos="fade-up">
+                    {date}
+                </Text>
                 <Flex pt="2" justifyContent="space-between">
                     {!isExpanded ? (
                         <Text id={`first-point-${id}`} isTruncated={!expanded.includes(idx)}>

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Center, Container, Heading, Image, HStack, Stack, Icon, Flex, Box } from "@chakra-ui/react";
+import { Center, Container, Heading, Image, HStack, Stack, Flex, Box, IconButton, Button } from "@chakra-ui/react";
 
 import { Content, configs, useContent, MarkdownFile } from "shared/content/Content";
 import { Socials } from "shared/socials/Socials";
@@ -51,15 +51,13 @@ export const Landing: FC = () => {
                 </HStack>
             </Center>
             <Flex justifyContent="center" data-aos="fade" data-aos-delay="1400">
-                <Icon
+                <Button
+                    as={IconButton}
                     fontSize="3xl"
-                    cursor="pointer"
-                    transition="color 0.25s ease-in-out"
-                    _hover={{ color: "primary.500" }}
-                    onClick={() => scrollIntoView()}
-                >
-                    <ChevronDownIcon />
-                </Icon>
+                    variant="icon"
+                    icon={<ChevronDownIcon />}
+                    onClick={scrollIntoView}
+                ></Button>
             </Flex>
         </Box>
     );

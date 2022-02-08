@@ -32,6 +32,22 @@ const ButtonStyles: ComponentStyleConfig = {
                 },
             };
         },
+        icon: (props: any) => {
+            return {
+                color: props.colorMode === "dark" ? "white" : "gray.900",
+                background: "transparent",
+                _hover: {
+                    background: "transparent",
+                    color: "primary.500",
+                },
+                _focus: {
+                    background: "transparent",
+                },
+                _active: {
+                    background: "transparent",
+                }
+            };
+        },
     },
     defaultProps: {
         variant: "solid",

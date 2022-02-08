@@ -11,12 +11,8 @@ export const Blog: FC = () => {
             <ArticleTitle title="Blog" />
             <br />
             {configs.about.blog.map((item) => (
-                <Box py="2">
-                    <Button
-                        onClick={() => window.open(item.link, "_blank")}
-                        variant="link"
-                        key={`blog-item-${item.title}`}
-                    >
+                <Box py="2" key={item.id}>
+                    <Button onClick={() => window.open(item.link, "_blank")} variant="link">
                         {item.title}
                     </Button>
                 </Box>

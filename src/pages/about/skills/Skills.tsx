@@ -12,7 +12,7 @@ export const Skills: FC = () => {
             <ArticleTitle title="Skills" pb="2" />
 
             <br />
-            {configs.aboutSummary.skills.map((skill) => (
+            {configs.about.skills.map((skill) => (
                 <Box p="0" mb="4" key={`skills-${skill.title}`}>
                     <SectionTitle title={skill.title} />
                     <Tags id={`skills-tags-${skill.title}`} tags={skill.tools} />

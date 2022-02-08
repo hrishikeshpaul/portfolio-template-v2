@@ -3,14 +3,14 @@ import { FC } from "react";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
-import { Blog } from "pages/about-summary/blog/Blog";
-import { Education } from "pages/about-summary//education/Education";
-import { Experience } from "pages/about-summary/experience/Experience";
-import { Skills } from "pages/about-summary//skills/Skills";
+import { Blog } from "pages/about/blog/Blog";
+import { Education } from "pages/about/education/Education";
+import { Experience } from "pages/about/experience/Experience";
+import { Skills } from "pages/about/skills/Skills";
 
 
-export const AboutSummary: FC = () => {
-    const content = useContent(MarkdownFile.AboutSummary);
+export const About: FC = () => {
+    const content = useContent(MarkdownFile.About);
 
     return (
         <Box>
@@ -26,7 +26,7 @@ export const AboutSummary: FC = () => {
                         {configs.common.pronunciation}
                     </Text>
                     <Box pt="4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">
-                        <Content fontSize="lg">{content.aboutSummary}</Content>
+                        <Content fontSize="lg">{content.about}</Content>
                     </Box>
                 </Box>
             </Flex>

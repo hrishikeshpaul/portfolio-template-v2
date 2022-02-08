@@ -10,7 +10,7 @@ import { Footer } from "shared/footer/Footer";
 import { NavbarHeight } from "theme";
 import { FeaturedProjects } from "pages/featured-projects/FeaturedProjects";
 import { OtherProjects } from "pages/other-projects/OtherProjects";
-import { AboutSummary } from "pages/about-summary/AboutSummary";
+import { About } from "pages/about/About";
 import { AboutPageId, WorkPageId } from "utils/useScroll";
 
 import "./App.scss";
@@ -35,7 +35,7 @@ export const App: FC = () => {
 
                 <Box id={AboutPageId}>
                     <PageHeader label="About Me" />
-                    <AboutSummary />
+                    <About />
                 </Box>
             </Box>
             <Footer />

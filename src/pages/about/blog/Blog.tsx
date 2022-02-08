@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Button, Box } from "@chakra-ui/react";
 
-import { ArticleTitle } from "pages/about-summary/common/title/Title";
+import { ArticleTitle } from "pages/about/common/title/Title";
 import { configs } from "shared/content/Content";
 
 export const Blog: FC = () => {
@@ -10,7 +10,7 @@ export const Blog: FC = () => {
         <>
             <ArticleTitle title="Blog" />
             <br />
-            {configs.aboutSummary.blog.map((item) => (
+            {configs.about.blog.map((item) => (
                 <Box py="2">
                     <Button
                         onClick={() => window.open(item.link, "_blank")}

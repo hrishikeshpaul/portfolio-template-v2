@@ -7,36 +7,36 @@ import common from "content/common/common.json";
 import landing from "content/landing/landing-config.json";
 import featuredProjects from "content/featured-projects/featured-projects-config.json";
 import otherProjects from "content/other-projects/other-projects-config.json";
-import aboutSummary from 'content/about-summary/about-summary-config.json';
+import about from 'content/about-summary/about-summary-config.json';
 
 import LandingMd from "content/landing/landing.md";
-import AboutSummaryMd from "content/about-summary/about-summary.md";
+import AboutMd from "content/about-summary/about-summary.md";
 
 export const configs = {
     common,
     landing,
     featuredProjects,
     otherProjects,
-    aboutSummary,
+    about,
 };
 
 interface State {
     landing: string;
-    aboutSummary: string;
+    about: string;
 }
 
 export enum MarkdownFile {
     Landing = "landing",
-    AboutSummary = "aboutSummary",
+    About = "about",
 }
 
 const Mapper = {
     [MarkdownFile.Landing]: LandingMd,
-    [MarkdownFile.AboutSummary]: AboutSummaryMd,
+    [MarkdownFile.About]: AboutMd,
 };
 
 export const useContent = (fileName: MarkdownFile) => {
-    const [data, setData] = useState<State>({ landing: "", aboutSummary: "" });
+    const [data, setData] = useState<State>({ landing: "", about: "" });
 
     useEffect(() => {
         fetch(Mapper[fileName])

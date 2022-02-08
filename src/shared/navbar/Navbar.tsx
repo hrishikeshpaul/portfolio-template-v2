@@ -7,7 +7,6 @@ import { bgDark, bgLight } from "theme";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { onResumeOpen } from "utils/Functions";
 import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
-import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
@@ -53,7 +52,7 @@ export const Navbar: FC = () => {
                                 Resume
                             </Button>
                         </HStack>
-                        <ColorModeButton ml="6" />
+                        {/* <ColorModeButton ml="6" /> */}
                     </Flex>
                 </Flex>
             </Container>

@@ -22,7 +22,7 @@ export const App: FC = () => {
     }, []);
 
     return (
-        <Container h="100%" px={{ base: 6, md: 24, lg: 6 }}>
+        <Container h="100%" px={{ base: 6, md: 6, lg: 4 }}>
             <Navbar />
             <Box mt={{ base: "96px", md: NavbarHeight }}>
                 <Landing />

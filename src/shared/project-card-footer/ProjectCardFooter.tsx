@@ -37,7 +37,7 @@ export const ReadMore: FC<ReadMoreProps> = ({ readMore }) => {
 };
 
 export const GitHubButton: FC<GitHubButtonProps> = ({ github, display }) => {
-    const as = useBreakpointValue({ base: IconButton, md: Button });
+    const as = useBreakpointValue({ base: IconButton, lg: Button });
 
     return github ? (
         <Button
@@ -57,7 +57,7 @@ export const GitHubButton: FC<GitHubButtonProps> = ({ github, display }) => {
 };
 
 export const LiveDemo: FC<LiveDemoProps> = ({ demo, display }) => {
-    const as = useBreakpointValue({ base: IconButton, md: Button });
+    const as = useBreakpointValue({ base: IconButton, lg: Button });
 
     return demo ? (
         <Button

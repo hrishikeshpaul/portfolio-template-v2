@@ -1,17 +1,17 @@
 import { FC, useState } from "react";
 
-import { Accordion, AccordionItem, Heading } from "@chakra-ui/react";
+import { Accordion, AccordionItem } from "@chakra-ui/react";
 import { configs } from "shared/content/Content";
 import { Expandable } from "pages/about-summary/common/expandable/Expandable";
+import { ArticleTitle } from "pages/about-summary/common/title/Title";
 
 export const Education: FC = () => {
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
 
     return (
         <>
-            <Heading fontSize="2xl" fontWeight="semibold">
-                Education
-            </Heading>
+            <ArticleTitle title="Education" />
+
             <br />
 
             <Accordion pt="2" allowMultiple index={educationExpanded} id="education">

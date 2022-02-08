@@ -1,10 +1,18 @@
 import { FC } from "react";
 
-import { StyleProps, Text } from "@chakra-ui/react";
+import { Heading, StyleProps, Text } from "@chakra-ui/react";
 
 interface Props extends StyleProps {
     title: string;
 }
+
+export const ArticleTitle: FC<Props> = ({ title, ...props }) => {
+    return (
+        <Heading fontSize="2xl" fontWeight="semibold" {...props} data-aos="fade-down">
+            {title}
+        </Heading>
+    );
+};
 
 export const SectionTitle: FC<Props> = ({ title, ...props }) => {
     return (

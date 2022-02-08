@@ -1,17 +1,16 @@
 import { FC } from "react";
 
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
 import { Tags } from "shared/tags/Tags";
-import { SectionTitle } from "../common/title/Title";
+import { ArticleTitle, SectionTitle } from "../common/title/Title";
 
 export const Skills: FC = () => {
     return (
         <>
-            <Heading fontSize="2xl" fontWeight="semibold" pb="2">
-                Skills
-            </Heading>
+            <ArticleTitle title="Skills" pb="2" />
+
             <br />
             {configs.aboutSummary.skills.map((skill) => (
                 <Box p="0" mb="4" key={`skills-${skill.title}`}>

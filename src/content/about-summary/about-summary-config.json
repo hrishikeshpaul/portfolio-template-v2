@@ -96,5 +96,15 @@
                 "Illustrator"
             ]
         }
+    ],
+    "blog": [
+        {
+            "title": "A beginner's guide to github",
+            "link": "https://hrishikeshpaul12.medium.com/a-beginners-guide-to-github-a811e662a777"
+        },
+        {
+            "title": "User Experience Design – A little more than just design",
+            "link": "https://hrishikeshpaul12.medium.com/user-experience-design-a-little-more-than-just-design-afdb941aeb5"
+        }
     ]
 }

@@ -3,9 +3,11 @@ import { FC } from "react";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
-import { Skills } from "pages/about-summary//skills/Skills";
+import { Blog } from "pages/about-summary/blog/Blog";
 import { Education } from "pages/about-summary//education/Education";
-import { Experience } from "pages/about-summary/experience/Expeirence";
+import { Experience } from "pages/about-summary/experience/Experience";
+import { Skills } from "pages/about-summary//skills/Skills";
+
 
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
@@ -43,6 +45,9 @@ export const AboutSummary: FC = () => {
             </Flex>
             <Box pt="16">
                 <Skills />
+            </Box>
+            <Box pt="16">
+                <Blog />
             </Box>
         </Box>
     );

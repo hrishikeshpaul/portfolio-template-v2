@@ -1,17 +1,17 @@
 import { FC, useState } from "react";
 
-import { Accordion, AccordionItem, Heading } from "@chakra-ui/react";
+import { Accordion, AccordionItem } from "@chakra-ui/react";
+
 import { configs } from "shared/content/Content";
 import { Expandable } from "pages/about-summary/common/expandable/Expandable";
+import { ArticleTitle } from "pages/about-summary/common/title/Title";
 
 export const Experience: FC = () => {
     const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
 
     return (
         <>
-            <Heading fontSize="2xl" fontWeight="semibold">
-                Experiences
-            </Heading>
+            <ArticleTitle title="Experiences" />
             <br />
             <Accordion pt="2" allowMultiple index={experiencesExpanded}>
                 {configs.aboutSummary.experiences.map((exp, idx) => (

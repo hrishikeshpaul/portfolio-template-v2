@@ -1,14 +1,6 @@
 import { FC, useEffect, useState, useMemo } from "react";
 
-import {
-    Box,
-    Button,
-    AccordionButton,
-    AccordionPanel,
-    Text,
-    Flex,
-    UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Button, AccordionButton, AccordionPanel, Text, Flex, UnorderedList } from "@chakra-ui/react";
 import { SectionTitle } from "../title/Title";
 
 interface Props {
@@ -56,7 +48,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 display="block"
             >
                 <SectionTitle title={title} fontWeight="semibold" />
-                <Text data-aos="fade-left">{subTitle}</Text>
+                <Text data-aos="fade">{subTitle}</Text>
                 <Text color="gray" data-aos="fade-up" fontSize="sm" fontWeight="semibold">
                     {date}
                 </Text>

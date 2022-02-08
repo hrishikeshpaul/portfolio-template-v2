@@ -8,6 +8,7 @@ import { Expandable } from "./expandable/Expandable";
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
     const [expanded, setExpanded] = useState<number[]>([]);
+    const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
 
     return (
         <Box>
@@ -31,22 +32,27 @@ export const AboutSummary: FC = () => {
                 mt="16"
                 justifyContent="space-between"
             >
-                <Box flex="0.6" flexShrink="0">
+                <Box flex="0.6" flexShrink="0" overflow="hidden">
                     <Heading fontSize="2xl" fontWeight="medium">
                         Education
                     </Heading>
                     <br />
-                    {configs.aboutSummary.educations.map((education) => (
-                        <Box mt="4" key={education.school}>
-                            <Text fontSize="xl" fontWeight="bold">
-                                {education.school}
-                            </Text>
-                            <Text>
-                                {education.degree} (GPA: {education.gpa})
-                            </Text>
-                            <Text opacity="0.6">{education.duration}</Text>
-                        </Box>
-                    ))}
+
+                    <Accordion pt="2" allowMultiple fontWeight="500" index={expanded}>
+                        {configs.aboutSummary.educations.map((edu, idx) => (
+                            <AccordionItem p="0" border="0" mb="4" key={`panel-${edu.school}-${edu.degree}`}>
+                                <Expandable
+                                    title={edu.school}
+                                    subTitle={edu.degree}
+                                    date={edu.duration}
+                                    descriptions={[edu.gpa]}
+                                    idx={idx}
+                                    onChange={setEducationExpanded}
+                                    expanded={educationExpanded}
+                                />
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                 </Box>
                 <Box flex="0.6" overflow="hidden">
                     <Heading fontSize="2xl" fontWeight="medium">

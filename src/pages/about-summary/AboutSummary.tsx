@@ -32,7 +32,9 @@ export const AboutSummary: FC = () => {
                 justifyContent="space-between"
             >
                 <Box flex="0.6" flexShrink="0">
-                    <Heading fontSize="2xl">Education</Heading>
+                    <Heading fontSize="2xl" fontWeight="medium">
+                        Education
+                    </Heading>
                     <br />
                     {configs.aboutSummary.educations.map((education) => (
                         <Box mt="4" key={education.school}>
@@ -47,12 +49,22 @@ export const AboutSummary: FC = () => {
                     ))}
                 </Box>
                 <Box flex="0.6" overflow="hidden">
-                    <Heading fontSize="2xl">Experiences</Heading>
+                    <Heading fontSize="2xl" fontWeight="medium">
+                        Experiences
+                    </Heading>
                     <br />
                     <Accordion pt="2" allowMultiple fontWeight="500" index={expanded}>
                         {configs.aboutSummary.experiences.map((exp, idx) => (
                             <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.company}`}>
-                                <Expandable {...exp} idx={idx} onChange={setExpanded} expanded={expanded} />
+                                <Expandable
+                                    title={exp.company}
+                                    subTitle={exp.position}
+                                    date={exp.position}
+                                    descriptions={exp.description}
+                                    idx={idx}
+                                    onChange={setExpanded}
+                                    expanded={expanded}
+                                />
                             </AccordionItem>
                         ))}
                     </Accordion>

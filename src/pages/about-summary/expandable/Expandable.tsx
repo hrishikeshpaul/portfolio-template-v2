@@ -1,18 +1,20 @@
 import { FC } from "react";
 
-import { Box, Button, AccordionButton, AccordionPanel, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, AccordionButton, AccordionPanel, Text, Flex, UnorderedList } from "@chakra-ui/react";
 
 interface Props {
     expanded: number[];
     idx: number;
-    company: string;
-    position: string;
-    duration: string;
-    description: string[];
     onChange: (expanded: any) => void;
+    title: string;
+    subTitle: string;
+    date: string;
+    descriptions: string[];
 }
 
-export const Expandable: FC<Props> = ({ expanded, idx, company, position, duration, description, onChange }) => {
+export const Expandable: FC<Props> = ({ expanded, idx, title, subTitle, date, descriptions, onChange }) => {
+    const isExpanded = expanded.includes(idx);
+
     return (
         <>
             <AccordionButton
@@ -26,15 +28,25 @@ export const Expandable: FC<Props> = ({ expanded, idx, company, position, durati
                 display="block"
             >
                 <Text fontSize="xl" fontWeight="bold">
-                    {company}
+                    {title}
                 </Text>
-                <Text>{position}</Text>
-                <Text opacity="0.6">{duration}</Text>
-                <Flex>
-                    <Box pr="2" flex="1" textAlign="left" isTruncated={!expanded.includes(idx)}>
-                        <Text as="li" isTruncated={!expanded.includes(idx)}>
-                            {description[0]}
-                        </Text>
+                <Text>{subTitle}</Text>
+                <Text opacity="0.6">{date}</Text>
+                <Flex pt="2">
+                    <Box pr="2" flex="1" isTruncated={!expanded.includes(idx)}>
+                        {!isExpanded ? (
+                            <ul>
+                                <Text as="li" isTruncated={!expanded.includes(idx)}>
+                                    {descriptions[0]}
+                                </Text>
+                            </ul>
+                        ) : (
+                            <UnorderedList listStylePosition="outside">
+                                <Text as="li" isTruncated={!expanded.includes(idx)}>
+                                    {descriptions[0]}
+                                </Text>
+                            </UnorderedList>
+                        )}
                     </Box>
                     {!expanded.includes(idx) && (
                         <Button
@@ -57,11 +69,13 @@ export const Expandable: FC<Props> = ({ expanded, idx, company, position, durati
                 </Flex>
             </AccordionButton>
             <AccordionPanel p="0">
-                {description.slice(1).map((desc, idx) => (
-                    <Text as="li" key={`${company}-desc-${idx}`}>
-                        {desc}
-                    </Text>
-                ))}
+                <UnorderedList listStylePosition="outside">
+                    {descriptions.slice(1).map((desc, idx) => (
+                        <Text as="li" key={`${title}-desc-${idx}`}>
+                            {desc}
+                        </Text>
+                    ))}
+                </UnorderedList>
 
                 {expanded.includes(idx) && (
                     <Flex justifyContent="flex-end">

@@ -3,14 +3,15 @@ import { FC } from "react";
 import { Center, Container, Heading, Image, HStack, Stack, Icon, Flex, Box } from "@chakra-ui/react";
 
 import { Content, configs, useContent, MarkdownFile } from "shared/content/Content";
-import { ChevronDownIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
+import { WorkPageId } from "utils/useScroll";
+import { ChevronDownIcon } from "utils/Icons";
 
 export const Landing: FC = () => {
     const content = useContent(MarkdownFile.Landing);
 
     const scrollIntoView = () => {
-        const featuredHeader = document.getElementById("page-featured-projects");
+        const featuredHeader = document.getElementById(WorkPageId);
 
         if (featuredHeader) {
             featuredHeader.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +36,7 @@ export const Landing: FC = () => {
                                 {content.landing}
                             </Content>
                         </Stack>
-                        
+
                         <Socials delay={1000} />
                     </Stack>
                     <Container

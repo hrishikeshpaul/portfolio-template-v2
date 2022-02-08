@@ -9,7 +9,7 @@ import { SectionTitle } from "../common/title/Title";
 export const Skills: FC = () => {
     return (
         <>
-            <Heading fontSize="2xl" fontWeight="semibold">
+            <Heading fontSize="2xl" fontWeight="semibold" pb="2">
                 Skills
             </Heading>
             <br />

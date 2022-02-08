@@ -1,15 +1,15 @@
 import { FC } from "react";
 
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { StyleProps, Text, useColorModeValue } from "@chakra-ui/react";
 
-interface Props {
+interface Props extends StyleProps {
     title: string;
 }
 
-export const SectionTitle: FC<Props> = ({ title }) => {
+export const SectionTitle: FC<Props> = ({ title, ...props }) => {
     const titleColor = useColorModeValue("gray.600", "gray.100");
     return (
-        <Text fontWeight="bold" fontSize="lg" color={titleColor}>
+        <Text fontWeight="semibold" fontSize="lg" {...props}>
             {title}
         </Text>
     );

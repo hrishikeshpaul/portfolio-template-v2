@@ -10,6 +10,7 @@ import {
     UnorderedList,
     useColorModeValue,
 } from "@chakra-ui/react";
+import { SectionTitle } from "../title/Title";
 
 interface Props {
     expanded: number[];
@@ -56,11 +57,9 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 overflow="hidden"
                 display="block"
             >
-                <Text fontSize="lg" fontWeight="bold" color={titleColor} data-aos="fade-up">
-                    {title}
-                </Text>
+                <SectionTitle title={title} fontWeight="semibold" />
                 <Text data-aos="fade-left">{subTitle}</Text>
-                <Text opacity="0.6" data-aos="fade-up">
+                <Text color="gray" data-aos="fade-up" fontSize="sm" fontWeight="semibold">
                     {date}
                 </Text>
                 <Flex pt="2" justifyContent="space-between">

@@ -1,14 +1,13 @@
 import { FC, useState } from "react";
 
-import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
 import { Expandable } from "pages/about-summary/common/expandable/Expandable";
-import { Tags } from "shared/tags/Tags";
 import { Skills } from "./skills/Skills";
+import { Education } from "./education/Education";
 
 export const AboutSummary: FC = () => {
-    const titleColor = useColorModeValue("gray.600", "gray.100");
     const content = useContent(MarkdownFile.AboutSummary);
     const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
@@ -38,27 +37,7 @@ export const AboutSummary: FC = () => {
                 justifyContent="space-between"
             >
                 <Box flex="0.6" flexShrink="0" overflow="hidden">
-                    <Heading fontSize="2xl" fontWeight="semibold">
-                        Education
-                    </Heading>
-                    <br />
-
-                    <Accordion pt="2" allowMultiple index={educationExpanded} id="education">
-                        {configs.aboutSummary.educations.map((edu, idx) => (
-                            <AccordionItem p="0" border="0" mb="4" key={`panel-${edu.school}-${edu.degree}`}>
-                                <Expandable
-                                    title={edu.school}
-                                    subTitle={edu.degree}
-                                    date={edu.duration}
-                                    content={edu.content}
-                                    id={edu.id}
-                                    idx={idx}
-                                    onChange={setEducationExpanded}
-                                    expanded={educationExpanded}
-                                />
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    <Education />
                 </Box>
                 <Box flex="0.6" overflow="hidden">
                     <Heading fontSize="2xl" fontWeight="semibold">

@@ -1,12 +1,13 @@
 import { FC, useState } from "react";
 
-import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem, useColorModeValue } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
 import { Expandable } from "pages/about-summary/expandable/Expandable";
 import { Tags } from "shared/tags/Tags";
 
 export const AboutSummary: FC = () => {
+    const titleColor = useColorModeValue("gray.600", "gray.100");
     const content = useContent(MarkdownFile.AboutSummary);
     const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
@@ -86,7 +87,7 @@ export const AboutSummary: FC = () => {
                 <br />
                 {configs.aboutSummary.skills.map((skill) => (
                     <Box p="0" mb="4" key={`skills-${skill.title}`}>
-                        <Text fontWeight="bold" fontSize="lg">
+                        <Text fontWeight="bold" fontSize="lg" color={titleColor}>
                             {skill.title}
                         </Text>
                         <Tags id={`skills-tags-${skill.title}`} tags={skill.tools} />

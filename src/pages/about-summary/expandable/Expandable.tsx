@@ -1,6 +1,15 @@
 import { FC, useEffect, useState, useMemo } from "react";
 
-import { Box, Button, AccordionButton, AccordionPanel, Text, Flex, UnorderedList } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    AccordionButton,
+    AccordionPanel,
+    Text,
+    Flex,
+    UnorderedList,
+    useColorModeValue,
+} from "@chakra-ui/react";
 
 interface Props {
     expanded: number[];
@@ -14,7 +23,8 @@ interface Props {
 }
 
 export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date, content, onChange }) => {
-    const isExpanded = expanded.includes(idx);
+    const titleColor = useColorModeValue("gray.600", "gray.100");
+    const isExpanded = useMemo(() => expanded.includes(idx), [expanded, idx]);
     const [isOverflowing, setIsOverflowing] = useState<boolean>(false);
     const showSeeMoreBtn = useMemo(
         () => (content.length > 1 && !isExpanded) || (!isExpanded && isOverflowing),
@@ -32,7 +42,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 setIsOverflowing(false);
             }
         }
-    }, [expanded, id]);
+    }, [id]);
 
     return (
         <>
@@ -46,7 +56,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 overflow="hidden"
                 display="block"
             >
-                <Text fontSize="lg" fontWeight="bold">
+                <Text fontSize="lg" fontWeight="bold" color={titleColor}>
                     {title}
                 </Text>
                 <Text>{subTitle}</Text>

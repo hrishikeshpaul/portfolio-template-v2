@@ -3,12 +3,14 @@ import { FC, useState } from "react";
 import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem } from "@chakra-ui/react";
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
-import { Expandable } from "./expandable/Expandable";
+import { Expandable } from "pages/about-summary/expandable/Expandable";
 
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
-    const [expanded, setExpanded] = useState<number[]>([]);
+    const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
+
+    console.log({ experiencesExpanded }, { educationExpanded });
 
     return (
         <Box>
@@ -38,14 +40,15 @@ export const AboutSummary: FC = () => {
                     </Heading>
                     <br />
 
-                    <Accordion pt="2" allowMultiple fontWeight="500" index={expanded}>
+                    <Accordion pt="2" allowMultiple fontWeight="500" index={educationExpanded} id="education">
                         {configs.aboutSummary.educations.map((edu, idx) => (
                             <AccordionItem p="0" border="0" mb="4" key={`panel-${edu.school}-${edu.degree}`}>
                                 <Expandable
                                     title={edu.school}
                                     subTitle={edu.degree}
                                     date={edu.duration}
-                                    descriptions={[edu.gpa]}
+                                    content={edu.content}
+                                    id={edu.id}
                                     idx={idx}
                                     onChange={setEducationExpanded}
                                     expanded={educationExpanded}
@@ -59,17 +62,18 @@ export const AboutSummary: FC = () => {
                         Experiences
                     </Heading>
                     <br />
-                    <Accordion pt="2" allowMultiple fontWeight="500" index={expanded}>
+                    <Accordion pt="2" allowMultiple fontWeight="500" index={experiencesExpanded}>
                         {configs.aboutSummary.experiences.map((exp, idx) => (
                             <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.company}`}>
                                 <Expandable
+                                    id={exp.id}
                                     title={exp.company}
                                     subTitle={exp.position}
                                     date={exp.position}
-                                    descriptions={exp.description}
+                                    content={exp.description}
                                     idx={idx}
-                                    onChange={setExpanded}
-                                    expanded={expanded}
+                                    onChange={setExperiencesExpanded}
+                                    expanded={experiencesExpanded}
                                 />
                             </AccordionItem>
                         ))}

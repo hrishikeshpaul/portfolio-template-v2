@@ -1,30 +1,40 @@
 {
     "educations": [
         {
+            "id": "edu-1",
             "school": "Indiana University",
             "degree": "Master of Science in Computer Science",
-            "gpa": "4/4",
-            "duration": "Aug 2019 - May 2021"
+            "duration": "Aug 2019 - May 2021",
+            "content": [
+                "GPA: 4/4",
+                "Courses: Software Engineering, Distributed Systems, Operating Systems, Advanced Algorithms, Experience Design"
+            ]
         },
         {
+            "id": "edu-2",
             "school": "Manipal University",
             "degree": "Bachelors in Computer Engineering",
-            "gpa": "8/10",
-            "duration": "Aug 2015 - Jul 2019"
+            "duration": "Aug 2015 - Jul 2019",
+            "content": [
+                "GPA: 8/10",
+                "Courses: Data Structures, OOP, Algorithms, Software Engineering, Computer Networks, Artificial Intelligence"
+            ]
         }
     ],
     "experiences": [
         {
+            "id": "exp-1",
             "company": "Reputation",
             "position": "Software Engineer (Frontend)",
             "duration": "Jun 2020 - Jun 2021",
             "description": [
-                "Revamping the current report generation framework suing React, that aggregates data from 30 modules to support an interactive cartesian system.​",
+                "Revamping the current report generation framework using React, that aggregates data from 30 modules to support an interactive cartesian system.​",
                 "Integrated user activity data from BigQuery into a custom tailored dashboard available to 10000+ clients.",
                 "Spearheaded the work on multiple reports for 5 priority clients to provide additional functionalities."
             ]
         },
         {
+            "id": "exp-2",
             "company": "CNS (NIH), Indiana University",
             "position": "Software Engineer",
             "duration": "Jun 2020 - Jun 2021",
@@ -35,6 +45,7 @@
             ]
         },
         {
+            "id": "exp-3",
             "company": "Skylark Drones",
             "position": "Software Engineer Intern",
             "duration": "Jan 2019 - Jun 2019",

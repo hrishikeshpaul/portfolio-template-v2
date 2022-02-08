@@ -8,7 +8,6 @@ import {
     Text,
     Flex,
     UnorderedList,
-    useColorModeValue,
 } from "@chakra-ui/react";
 import { SectionTitle } from "../title/Title";
 
@@ -24,7 +23,6 @@ interface Props {
 }
 
 export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date, content, onChange }) => {
-    const titleColor = useColorModeValue("gray.600", "gray.100");
     const isExpanded = useMemo(() => expanded.includes(idx), [expanded, idx]);
     const [isOverflowing, setIsOverflowing] = useState<boolean>(false);
     const showSeeMoreBtn = useMemo(
@@ -62,7 +60,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 <Text color="gray" data-aos="fade-up" fontSize="sm" fontWeight="semibold">
                     {date}
                 </Text>
-                <Flex pt="2" justifyContent="space-between">
+                <Flex pt="2" justifyContent="space-between" data-aos="fade">
                     {!isExpanded ? (
                         <Text id={`first-point-${id}`} isTruncated={!expanded.includes(idx)}>
                             {content[0]}

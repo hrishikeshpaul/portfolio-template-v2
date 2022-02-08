@@ -46,7 +46,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 overflow="hidden"
                 display="block"
             >
-                <Text fontSize="xl" fontWeight="bold">
+                <Text fontSize="lg" fontWeight="bold">
                     {title}
                 </Text>
                 <Text>{subTitle}</Text>

@@ -4,13 +4,12 @@ import { Box, Flex, Heading, Text, Image, Accordion, AccordionItem } from "@chak
 
 import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
 import { Expandable } from "pages/about-summary/expandable/Expandable";
+import { Tags } from "shared/tags/Tags";
 
 export const AboutSummary: FC = () => {
     const content = useContent(MarkdownFile.AboutSummary);
     const [experiencesExpanded, setExperiencesExpanded] = useState<number[]>([]);
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);
-
-    console.log({ experiencesExpanded }, { educationExpanded });
 
     return (
         <Box>
@@ -35,12 +34,12 @@ export const AboutSummary: FC = () => {
                 justifyContent="space-between"
             >
                 <Box flex="0.6" flexShrink="0" overflow="hidden">
-                    <Heading fontSize="2xl" fontWeight="medium">
+                    <Heading fontSize="2xl" fontWeight="semibold">
                         Education
                     </Heading>
                     <br />
 
-                    <Accordion pt="2" allowMultiple fontWeight="500" index={educationExpanded} id="education">
+                    <Accordion pt="2" allowMultiple index={educationExpanded} id="education">
                         {configs.aboutSummary.educations.map((edu, idx) => (
                             <AccordionItem p="0" border="0" mb="4" key={`panel-${edu.school}-${edu.degree}`}>
                                 <Expandable
@@ -58,18 +57,18 @@ export const AboutSummary: FC = () => {
                     </Accordion>
                 </Box>
                 <Box flex="0.6" overflow="hidden">
-                    <Heading fontSize="2xl" fontWeight="medium">
+                    <Heading fontSize="2xl" fontWeight="semibold">
                         Experiences
                     </Heading>
                     <br />
-                    <Accordion pt="2" allowMultiple fontWeight="500" index={experiencesExpanded}>
+                    <Accordion pt="2" allowMultiple index={experiencesExpanded}>
                         {configs.aboutSummary.experiences.map((exp, idx) => (
                             <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.company}`}>
                                 <Expandable
                                     id={exp.id}
                                     title={exp.company}
                                     subTitle={exp.position}
-                                    date={exp.position}
+                                    date={exp.duration}
                                     content={exp.description}
                                     idx={idx}
                                     onChange={setExperiencesExpanded}
@@ -80,6 +79,20 @@ export const AboutSummary: FC = () => {
                     </Accordion>
                 </Box>
             </Flex>
+            <Box pt="16">
+                <Heading fontSize="2xl" fontWeight="semibold">
+                    Skills
+                </Heading>
+                <br />
+                {configs.aboutSummary.skills.map((skill) => (
+                    <Box p="0" mb="4" key={`skills-${skill.title}`}>
+                        <Text fontWeight="bold" fontSize="lg">
+                            {skill.title}
+                        </Text>
+                        <Tags id={`skills-tags-${skill.title}`} tags={skill.tools} />
+                    </Box>
+                ))}
+            </Box>
         </Box>
     );
 };

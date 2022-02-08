@@ -58,7 +58,7 @@
     "skills": [
         {
             "title": "Programming",
-            "tools": ["TypeScript", "JavaScript", "Python", "C/C++", "Java", "NoSQL", "SQL"]
+            "tools": ["TypeScript", "JavaScript", "Python", "C/C++", "Java", "NoSQL", "SQL", "Shell", "React Native", "Vega (D3.js)"]
         },
         {
             "title": "Web",
@@ -84,6 +84,7 @@
                 "Usability Testing",
                 "Prototyping",
                 "Adobe XD",
+                "Figma",
                 "Sketch",
                 "Illustrator",
                 "Photoshop"

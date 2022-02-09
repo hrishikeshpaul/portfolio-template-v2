@@ -2,15 +2,18 @@
 
 * {
   box-sizing: border-box;
+  cursor: url(./utils/assets/cursor.svg) 20 20, auto !important;
+
+  a,
+  button, svg, path {
+    cursor: url(./utils/assets/pointer.svg) 5 15, pointer !important;
+  }
 }
 
 html,
 body,
 #root {
   height: 100%;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 50 50' style='fill:black;font-size:24px; transform: rotate(180deg) scale(1.1);'><text y='50%'>🍕</text></svg>")
-      20 20,
-    auto;
 
   *::selection {
     background: var(--hp-colors-orange-200);

@@ -7,7 +7,7 @@
         "demo": "https://hrishikeshpaul.github.io/post/",
         "tags": ["Python", "Vue", "Flask", "Artificial Intelligence", "Language Processing"],
         "description": "Post is a simple algorithm that was developed to tag a word in a sentence corresponding to its part of speech. The algorithm makes of a probabilistic approach along with some randomness, together which forms the basis of an algorithm called Gibbs Sampling.",
-        "image": "/assets/other-projects/post.png"
+        "image": "/assets/other-projects/post.webp"
     },
     {
         "id": "other-project-noq",
@@ -18,7 +18,7 @@
         "tags": ["Vue", "NodeJS", "JavaScript", "MongoDB", "Heroku", "Agile", "Sockets", "JIRA"],
         "description": "NoQ is a tool which allows for both employers and students to skip the hassle seen in modern day career fairs, while effectively pairing up students with employees based on various factors.",
         "readMore": "https://iampaul.web.app/projects/noq",
-        "image": "/assets/other-projects/noq.png"
+        "image": "/assets/other-projects/noq.webp"
     },
     {
         "id": "other-project-bank-compare",
@@ -27,7 +27,7 @@
         "tags": ["UX Design", "Analysis", "Adobe XD", "Mockups"],
         "description": "This project demonstrates how the selection of colors, fonts, shapes, languages, layout and other styles can lead to drastically different user experiences, by comparing landing pages of 3 bank websites built from scratch.",
         "readMore": "https://iampaul.web.app/projects/noq",
-        "image": "/assets/other-projects/bank.png"
+        "image": "/assets/other-projects/bank.webp"
     },
     {
         "id": "other-project-bunder",
@@ -36,7 +36,7 @@
         "tags": ["Surveying", "User Interviews", "Ideation", "Analysis", "Product Planning"],
         "description": "An MVP Proposal - Bunder is an intuitive web platform for micro-communities to share sensitive data with privacy within the community and allow engagement amongst them.",
         "readMore": "https://iampaul.web.app/projects/bunder",
-        "image": "/assets/other-projects/bunder.png"
+        "image": "/assets/other-projects/bunder.webp"
     },
     {
         "id": "other-project-suicide-analyzer",
@@ -44,7 +44,7 @@
         "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
         "description": "This is a web application, uses a map to demonstrate the number suicides committed around the globe, according to a dataset provided by the WHO.",
         "github": "https://github.com/hrishikeshpaul/whodata",
-        "image": "/assets/other-projects/suicide-analyzer.png"
+        "image": "/assets/other-projects/suicide-analyzer.webp"
     },
     {
         "id": "other-project-nutricare",
@@ -52,6 +52,6 @@
         "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
         "description": "A web app for patients to input nutrient intake data and researchers to analyse the data with the help of graphs and tables. A researcher can conduct studies on N different subjects for a particular problem statement.",
         "readMore": "https://angel.co/projects/576300-nutricare",
-        "image": "/assets/other-projects/nutricare.png"
+        "image": "/assets/other-projects/nutricare.webp"
     }
 ]

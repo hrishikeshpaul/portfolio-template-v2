@@ -9,7 +9,7 @@
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
         "description": "A collaboration with the NIH to build visualization tool to envision large biomedical datasets for researchers, doctors and experts.",
         "readMore": "https://iampaul.web.app/projects/asctb-reporter",
-        "image": "/assets/featured-projects/asctb.png"
+        "image": "/assets/featured-projects/asctb.webp"
     },
     {
         "id": "featured-project-scrapbook",
@@ -33,8 +33,8 @@
         "demo": "http://34.69.102.109/",
         "github": "https://github.com/hrishikeshpaul/scrapbook",
         "description": "A micro-service architecture based web application that enables users to upload, share and manage images.",
-        "readMore": "https://iampaul.web.app/projects/measure-ux",
-        "image": "/assets/featured-projects/scrapbook.png"
+        "readMore": "https://hrishikeshpaul.medium.com/scrapbook-a-micro-service-based-photo-sharing-application-3a8760681af6",
+        "image": "/assets/featured-projects/scrapbook.webp"
     },
     {
         "id": "featured-project-measure-ux",
@@ -44,6 +44,6 @@
         "tags": ["UX Research", "User Journey", "Experience Mapping", "Surveys", "Interviews", "Adobe XD"],
         "description": "A project to quantify user experiences demonstrated by measuring the user experience of uploading a photo on Instagram.",
         "readMore": "https://iampaul.web.app/projects/measure-ux",
-        "image": "/assets/featured-projects/measure-ux.png"
+        "image": "/assets/featured-projects/measure-ux.webp"
     }
 ]

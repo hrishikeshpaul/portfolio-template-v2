@@ -2,18 +2,13 @@
 
 * {
   box-sizing: border-box;
-  cursor: url(./utils/assets/cursor.svg) 20 20, auto !important;
-
-  a,
-  button, svg, path {
-    cursor: url(./utils/assets/pointer.svg) 5 15, pointer !important;
-  }
 }
 
 html,
 body,
 #root {
   height: 100%;
+  cursor: url(./utils/assets/cursor.svg) 20 20, auto !important;
 
   *::selection {
     background: var(--hp-colors-orange-200);

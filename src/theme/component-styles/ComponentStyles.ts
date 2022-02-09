@@ -54,9 +54,16 @@ const ButtonStyles: ComponentStyleConfig = {
     },
 };
 
+const LinkStyles: ComponentStyleConfig = {
+    baseStyle: {
+        fontWeight: 700,
+        color: 'primary.500',
+    }
+}
+
 export const components = {
     Text: { ...TextStyles },
     Container: { ...ContainerStyles },
-    Link: { ...TextStyles },
+    Link: { ...LinkStyles },
     Button: { ...ButtonStyles },
 };

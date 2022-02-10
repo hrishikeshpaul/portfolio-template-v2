@@ -3,8 +3,8 @@ import { FC } from "react";
 import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
-import { bgDark, bgLight } from "theme";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
+import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
 import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
 

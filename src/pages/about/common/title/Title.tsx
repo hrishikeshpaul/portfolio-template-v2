@@ -8,7 +8,7 @@ interface Props extends StyleProps {
 
 export const ArticleTitle: FC<Props> = ({ title, ...props }) => {
     return (
-        <Heading fontSize="2xl" fontWeight="semibold" {...props} data-aos="fade-down">
+        <Heading fontSize="2xl" fontWeight="bold" {...props} data-aos="fade-down">
             {title}
         </Heading>
     );

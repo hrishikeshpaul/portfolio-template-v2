@@ -8,7 +8,7 @@
         "github": "https://github.com/hrishikeshpaul/ccf-asct-reporter",
         "tags": ["Angular 11", "TypeScript", "NodeJS", "NGXS", "Vega", "TravisCI", "Open Source"],
         "description": "A collaboration with the NIH to build visualization tool to envision large biomedical datasets for researchers, doctors and experts.",
-        "readMore": "https://iampaul.web.app/projects/asctb-reporter",
+        "readMore": "https://hrishikeshpaul.medium.com/asct-b-reporter-a-visualization-tool-d4dd29de97d8",
         "image": "/assets/featured-projects/asctb.webp"
     },
     {

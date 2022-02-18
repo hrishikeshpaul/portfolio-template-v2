@@ -1,5 +1,16 @@
 [
     {
+        "id": "featured-project-trackcta",
+        "title": "trackCTA",
+        "year": "Dec 2021 - Present",
+        "location": "Chicago",
+        "demo": "https://www.trackcta.com/",
+        "github": "https://github.com/hrishikeshpaul/trackcta",
+        "tags": ["React", "TypeScript", "NodeJS", "Web Sockets", "i18n", "Google Maps", "GCP", "CI/CD"],
+        "description": "An internationalized web app to track and predict Chicago Transit Authority (CTA) busses and trains.",
+        "image": "/assets/featured-projects/trackcta.webp"
+    },
+    {
         "id": "featured-project-asctb-reporter",
         "title": "ASCT+B Reporter",
         "year": "Jun 2020 - Jun 2021",

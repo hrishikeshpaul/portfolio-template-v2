@@ -6,7 +6,7 @@
         "location": "Chicago",
         "demo": "https://www.trackcta.com/",
         "github": "https://github.com/hrishikeshpaul/trackcta",
-        "tags": ["React", "TypeScript", "NodeJS", "Web Sockets", "i18n", "Google Maps", "GCP", "CI/CD"],
+        "tags": ["React", "TypeScript", "NodeJS", "Web Sockets", "i18n", "Google Maps", "GCP", "CI/CD", "Shell"],
         "description": "An internationalized web app to track and predict Chicago Transit Authority (CTA) busses and trains.",
         "image": "/assets/featured-projects/trackcta.webp"
     },

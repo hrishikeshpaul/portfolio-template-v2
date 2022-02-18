@@ -1,7 +1,7 @@
 import { FC, useEffect, useState, useMemo } from "react";
 
 import { Box, Button, AccordionButton, AccordionPanel, Text, Flex, UnorderedList } from "@chakra-ui/react";
-import { SectionTitle } from "../title/Title";
+import { SectionTitle } from "pages/about/common/title/Title";
 
 interface Props {
     expanded: number[];

@@ -73,7 +73,7 @@
         },
         {
             "title": "Web",
-            "tools": ["React", "Angular 11", "Vue", "NodeJS", "Flask", "Redux", "NGXS", "HTML/CSS", "OAuth"]
+            "tools": ["React", "Angular 11", "Vue", "NodeJS", "Flask", "Redux", "NGXS", "HTML/CSS", "OAuth", "i18n"]
         },
         {
             "title": "Databases",

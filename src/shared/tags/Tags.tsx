@@ -18,7 +18,7 @@ export const Tags: FC<Props> = ({ id, tags, size = "sm" }) => {
                         transition="0.2s ease-in-out"
                         transitionProperty="background, color"
                         _hover={{ color: "white", bg: "primary.500" }}
-                        textTransform="capitalize"
+                        textTransform="none"
                         colorScheme="gray"
                         borderRadius="md"
                         px="8px"

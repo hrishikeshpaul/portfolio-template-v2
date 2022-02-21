@@ -17,7 +17,7 @@
         "demo": "http://noq-client.herokuapp.com/login",
         "tags": ["Vue", "NodeJS", "JavaScript", "MongoDB", "Heroku", "Agile", "Sockets", "JIRA"],
         "description": "NoQ is a tool which allows for both employers and students to skip the hassle seen in modern day career fairs, while effectively pairing up students with employees based on various factors.",
-        "readMore": "https://iampaul.web.app/projects/noq",
+        "readMore": "https://hrishikeshpaul.medium.com/noq-a-job-portal-for-college-career-fairs-9996bbb37a1c",
         "image": "/assets/other-projects/noq.webp"
     },
     {

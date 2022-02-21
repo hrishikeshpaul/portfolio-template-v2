@@ -28,21 +28,16 @@ export const Footer: FC = () => {
                 <Heading {...headerStyles} onClick={onMailTo} display={{ base: "block", md: "none" }}>
                     email
                 </Heading>
-
-                <Heading fontSize={{ base: "2xl", md: "3xl" }}>/</Heading>
-
-                <Heading {...headerStyles} onClick={onResumeOpen}>
-                    resume
-                </Heading>
             </Flex>
             <Text>
                 If you want to know more about my experiences and journey, or just talk in general, get in touch! ✌️
             </Text>
-            <Box pt="8">
-                <Socials delay={100} resume={false} exclude={["mail"]} />
+            <Box pt="16">
+                <Socials delay={100} exclude={["mail"]} />
             </Box>
             <Flex
-                py="2"
+                pt="4"
+                pb="2"
                 fontSize="sm"
                 color="gray.500"
                 justifyContent={{ base: "center", md: "space-between" }}

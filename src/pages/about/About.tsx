@@ -16,7 +16,7 @@ export const About: FC = () => {
         <Box>
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
                 <Box flex="0.35" data-aos="fade-up">
-                    <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" />
+                    <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" alt="profile image" />
                 </Box>
                 <Box flex="0.85">
                     <Heading data-aos="fade-down">

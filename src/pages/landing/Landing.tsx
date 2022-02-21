@@ -46,7 +46,7 @@ export const Landing: FC = () => {
                         data-aos="fade-up"
                         data-aos-delay="400"
                     >
-                        <Image borderRadius="xl" src={configs.landing.picture} />
+                        <Image alt="profile image" borderRadius="xl" src={configs.landing.picture} />
                     </Container>
                 </HStack>
             </Center>

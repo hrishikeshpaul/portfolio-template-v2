@@ -70,7 +70,7 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                             size="xs"
                             variant="link"
                             colorScheme="gray"
-                            opacity="0.7"
+                            opacity="0.8"
                             onClick={() => {
                                 if (!expanded.includes(idx)) {
                                     onChange([...expanded, idx]);

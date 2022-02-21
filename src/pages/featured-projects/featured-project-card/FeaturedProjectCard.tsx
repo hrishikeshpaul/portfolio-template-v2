@@ -20,6 +20,7 @@ interface Props {
     readMore?: string;
     image: string;
     imagePosition: ImagePosition;
+    jpg: string;
 }
 
 const ImagePositionLayoutMapper: Record<ImagePosition, "row" | "row-reverse"> = {
@@ -49,6 +50,7 @@ export const FeaturedProjectCard: FC<Props> = ({
     imagePosition,
     location,
     year,
+    jpg,
 }) => {
     return (
         <Flex
@@ -115,7 +117,11 @@ export const FeaturedProjectCard: FC<Props> = ({
                 pl={{ base: "0", lg: ImagePositionPaddingRightMapper[imagePosition] }}
                 pr={{ base: "0", lg: ImagePositionPaddingLeftMapper[imagePosition] }}
             >
-                <Image borderRadius="xl" src={image} alt={`${title}-cover-image`} />
+                <picture>
+                    <source type="image/webp" srcSet={image}></source>
+                    <source type="image/jpeg" srcSet={jpg}></source>
+                    <Image borderRadius="xl" src={jpg} alt={`${title}-cover-image`} />
+                </picture>
             </Box>
         </Flex>
     );

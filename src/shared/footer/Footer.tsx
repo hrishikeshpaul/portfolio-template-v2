@@ -4,7 +4,7 @@ import { Box, Heading, Flex, Text } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
 import { PageHeader } from "shared/page-header/PageHeader";
-import { onMailTo, onResumeOpen } from "utils/Functions";
+import { onMailTo } from "utils/Functions";
 import { Socials } from "shared/socials/Socials";
 
 const headerStyles = {

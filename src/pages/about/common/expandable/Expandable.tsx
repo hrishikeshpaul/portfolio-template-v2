@@ -43,7 +43,6 @@ export const Expandable: FC<Props> = ({ expanded, id, idx, title, subTitle, date
                 disabled
                 onClick={undefined}
                 _hover={{ bg: "transparent" }}
-                cursor="auto"
                 overflow="hidden"
                 display="block"
             >

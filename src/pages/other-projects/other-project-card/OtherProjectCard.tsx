@@ -14,9 +14,10 @@ interface Props {
     description: string;
     readMore?: string;
     image: string;
+    jpg: string;
 }
 
-export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, description, readMore, image }) => {
+export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, description, readMore, image, jpg }) => {
     return (
         <Flex
             alignItems={{ base: "flex-start", lg: "center" }}
@@ -25,7 +26,11 @@ export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, des
             py={{ base: "8", md: "8" }}
         >
             <Box flex="0.25" display={{ base: "none", md: "block" }} data-aos="fade-up" data-aos-offset="200">
-                <Image ignoreFallback src={image} borderRadius="xl" alt={`${title}-cover-image`} />
+                <picture>
+                    <source type="image/webp" srcSet={image}></source>
+                    <source type="image/jpeg" srcSet={jpg}></source>
+                    <Image ignoreFallback src={image} borderRadius="xl" alt={`${title}-cover-image`} />
+                </picture>
             </Box>
             <Flex w="100%" direction="column" alignContent="center" flex={1}>
                 <Box>

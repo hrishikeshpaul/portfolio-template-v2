@@ -46,7 +46,11 @@ export const Landing: FC = () => {
                         data-aos="fade-up"
                         data-aos-delay="400"
                     >
-                        <Image alt="profile image" borderRadius="xl" src={configs.landing.picture} />
+                        <picture>
+                            <source type="image/webp" src={configs.landing.picture}></source>
+                            <source type="image/jpeg" src={configs.landing.jpg}></source>
+                            <Image borderRadius="xl" src={configs.landing.jpg} alt={`face-cover-image`} />
+                        </picture>
                     </Container>
                 </HStack>
             </Center>

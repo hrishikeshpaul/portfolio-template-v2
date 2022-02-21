@@ -15,17 +15,17 @@ export const About: FC = () => {
     return (
         <Box>
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
-                <Box flex="0.35" data-aos="fade-up" data-aos-offset="200">
+                <Box flex="0.35" data-aos="fade-up">
                     <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" />
                 </Box>
                 <Box flex="0.85">
-                    <Heading data-aos="fade-down" data-aos-offset="200">
+                    <Heading data-aos="fade-down">
                         {configs.common.name}
                     </Heading>
-                    <Text fontWeight="bold" opacity="0.5" data-aos="fade" data-aos-offset="200" data-aos-delay="200">
+                    <Text fontWeight="bold" opacity="0.5" data-aos="fade" data-aos-delay="200">
                         {configs.common.pronunciation}
                     </Text>
-                    <Box pt="4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">
+                    <Box pt="4" data-aos="fade-up" data-aos-delay="400">
                         <Content fontSize="lg">{content.about}</Content>
                     </Box>
                 </Box>

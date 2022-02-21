@@ -4,4 +4,5 @@
 @font-face {
     font-family: "Signature";
     src: local("Signature"), url(./logo-type/Monsieur-Pomme.ttf) format("truetype");
+    font-display: fallback;
 }

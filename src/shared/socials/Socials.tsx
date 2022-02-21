@@ -34,6 +34,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                     !exclude?.includes(social.type) && (
                         <Button
                             p="0"
+                            aria-label={`${social.type}-button`}
                             as={IconButton}
                             data-aos="fade"
                             variant="icon"

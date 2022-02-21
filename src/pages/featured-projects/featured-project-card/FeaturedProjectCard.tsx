@@ -115,7 +115,7 @@ export const FeaturedProjectCard: FC<Props> = ({
                 pl={{ base: "0", lg: ImagePositionPaddingRightMapper[imagePosition] }}
                 pr={{ base: "0", lg: ImagePositionPaddingLeftMapper[imagePosition] }}
             >
-                <Image borderRadius="xl" src={image} />
+                <Image borderRadius="xl" src={image} alt={`${title}-cover-image`} />
             </Box>
         </Flex>
     );

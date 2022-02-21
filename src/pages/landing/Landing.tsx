@@ -26,7 +26,7 @@ export const Landing: FC = () => {
                         <Stack spacing="8">
                             <Heading
                                 fontSize={{ base: "5xl", md: "7xl" }}
-                                lineHeight={1}
+                                lineHeight="1"
                                 data-aos="fade-down"
                                 data-aos-delay="400"
                             >

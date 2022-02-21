@@ -59,6 +59,7 @@ export const Landing: FC = () => {
                     as={IconButton}
                     fontSize="3xl"
                     variant="icon"
+                    aria-label="down arrow button"
                     icon={<ChevronDownIcon />}
                     onClick={scrollIntoView}
                 ></Button>

@@ -7,6 +7,7 @@ import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
 import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
+import { MenuDrawer } from "./drawer/Drawer";
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
@@ -22,7 +23,7 @@ export const Navbar: FC = () => {
             <Container py="4" px="4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
-                    <Flex alignItems="center">
+                    <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
                         <HStack spacing="8">
                             <Button
                                 variant="link"
@@ -52,8 +53,9 @@ export const Navbar: FC = () => {
                                 Resume
                             </Button>
                         </HStack>
-                        {/* <ColorModeButton ml="6" /> */}
                     </Flex>
+
+                    <MenuDrawer display={{ base: "block", md: "none" }} />
                 </Flex>
             </Container>
         </Box>

@@ -23,9 +23,9 @@ interface Props {
 
 export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
     return (
-        <HStack spacing="4">
+        <HStack spacing="5">
             {resume && (
-                <Button data-aos="fade" data-aos-delay="700" size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
+                <Button data-aos="fade" data-aos-delay="400" size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
                     Resume
                 </Button>
             )}
@@ -36,11 +36,11 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                             p="0"
                             aria-label={`${social.type}-button`}
                             as={IconButton}
-                            data-aos="fade"
                             variant="icon"
+                            data-aos="fade"
                             data-aos-delay={idx * 100 + delay}
                             key={social.type}
-                            fontSize={social.type === "mail" ? "3xl" : "2xl"}
+                            fontSize={social.type === "mail" ? "24pt" : "20pt"}
                             icon={LinksToIconMapper[social.type]}
                             onClick={() => open(social.link)}
                         />

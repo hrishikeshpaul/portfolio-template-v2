@@ -120,7 +120,13 @@ export const FeaturedProjectCard: FC<Props> = ({
                 <picture>
                     <source type="image/webp" srcSet={image}></source>
                     <source type="image/jpeg" srcSet={jpg}></source>
-                    <Image borderRadius="xl" src={jpg} alt={`${title}-cover-image`} />
+                    <Image
+                        borderRadius="xl"
+                        src={jpg}
+                        alt={`${title}-cover-image`}
+                        transition="all 0.4s ease-in-out"
+                        _hover={{ boxShadow: "0px 20px 60px rgb(77 77 77 / 10%)", transform: "scale(1.01)" }}
+                    />
                 </picture>
             </Box>
         </Flex>

@@ -40,7 +40,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                             variant="icon"
                             data-aos-delay={idx * 100 + delay}
                             key={social.type}
-                            fontSize="2xl"
+                            fontSize={social.type === "mail" ? "3xl" : "2xl"}
                             icon={LinksToIconMapper[social.type]}
                             onClick={() => open(social.link)}
                         />

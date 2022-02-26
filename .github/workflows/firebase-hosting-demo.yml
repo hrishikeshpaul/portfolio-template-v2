@@ -21,6 +21,11 @@ jobs:
       - name: Build app
         run: yarn build
 
+      - name: Create firebase.json and .firebaserc
+        run: |
+          echo secrets.FIREBASE_JSON >> firebase.json
+          echo secrets.FIREBASERC >> .firebaserc
+
       - name: Deploy to firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

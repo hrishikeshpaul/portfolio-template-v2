@@ -3,7 +3,7 @@
   "targets": {
     "iampaul": {
       "hosting": {
-        "main": [
+        "prod": [
           "iampaul"
         ]
       }

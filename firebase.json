@@ -16,7 +16,7 @@
       ]
     },
     {
-      "target": "main",
+      "target": "prod",
       "public": "build",
       "ignore": [
         "firebase.json",

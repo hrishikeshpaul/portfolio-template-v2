@@ -1,5 +1,7 @@
 {
-  "projects": {},
+  "projects": {
+    "prod": "iampaul"
+  },
   "targets": {
     "iampaul": {
       "hosting": {

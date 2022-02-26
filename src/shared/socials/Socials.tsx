@@ -25,7 +25,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
     return (
         <HStack spacing="5">
             {resume && (
-                <Button data-aos="fade" data-aos-delay="400" size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
+                <Button data-aos="fade" data-aos-delay={delay} size="lg" borderRadius="xl" mr="2" onClick={onResumeOpen}>
                     Resume
                 </Button>
             )}

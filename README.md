@@ -3,7 +3,7 @@
 
 ![Portfolio Template Banner](public/assets/readme/banner.png)
 
-💻  Live [demo](https://hrpaul.web.app/)
+💻  Live [demo](https://hpaul-v2.web.app/)
 
 ---
 

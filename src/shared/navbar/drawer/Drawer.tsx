@@ -13,24 +13,25 @@ import {
     IconButton,
     StyleProps,
     Flex,
-    Text,
-    HStack,
     VStack,
-    DrawerFooter,
+    useColorModeValue,
 } from "@chakra-ui/react";
 
 import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
-import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
+import { AboutPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
+import { onResumeOpen } from "utils/Functions";
 
 interface Props extends StyleProps {
     onSectionClick: (section: string) => void;
+    currentPage: string;
 }
 
-export const MenuDrawer: FC<StyleProps> = ({ ...props }) => {
+export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef<any>(null);
+    const navItemColor = useColorModeValue("gray.800", "white");
 
     return (
         <Box {...props}>
@@ -44,7 +45,7 @@ export const MenuDrawer: FC<StyleProps> = ({ ...props }) => {
                 color="primary.500"
                 icon={<MenuIcon />}
             />
-            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose} autoFocus={false}>
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerHeader px="4">
@@ -55,18 +56,58 @@ export const MenuDrawer: FC<StyleProps> = ({ ...props }) => {
                     </DrawerHeader>
 
                     <DrawerBody>
-                        <VStack spacing="4">
-                            <Text fontSize="xl" fontWeight="600">
+                        <VStack spacing="6" my="16">
+                            <Button
+                                variant="link"
+                                color={navItemColor}
+                                textDecoration="underline"
+                                textDecorationThickness="2px"
+                                textDecorationColor={currentPage === WorkPageId ? "primary.500" : "transparent"}
+                                onClick={() => {
+                                    onClose();
+                                    setTimeout(() => {
+                                        onSectionClick(WorkPageId);
+                                    }, 250);
+                                }}
+                                data-aos="fade"
+                                data-aos-delay="200"
+                                fontWeight="600"
+                                fontSize="2xl"
+                            >
                                 Work
-                            </Text>
-                            <Text fontSize="xl" fontWeight="600">
+                            </Button>
+                            <Button
+                                variant="link"
+                                color={navItemColor}
+                                textDecoration={currentPage === AboutPageId ? "underline" : "none"}
+                                textDecorationThickness="2px"
+                                textDecorationColor="primary.500"
+                                onClick={() => {
+                                    onClose();
+                                    setTimeout(() => {
+                                        onSectionClick(AboutPageId);
+                                    }, 250);
+                                }}
+                                data-aos="fade"
+                                data-aos-delay="300"
+                                fontWeight="600"
+                                fontSize="2xl"
+                            >
                                 About
-                            </Text>
-                            <Text fontSize="xl" fontWeight="700" color="primary.500">
+                            </Button>
+                            <Button
+                                variant="link"
+                                color="primary.500"
+                                onClick={onResumeOpen}
+                                data-aos="fade"
+                                data-aos-delay="400"
+                                fontWeight="600"
+                                fontSize="2xl"
+                            >
                                 Resume
-                            </Text>
+                            </Button>
                         </VStack>
-                        <Flex justifyContent="center" mt="8">
+                        <Flex justifyContent="center" mt="16">
                             <Socials delay={100} resume={false} />
                         </Flex>
                     </DrawerBody>

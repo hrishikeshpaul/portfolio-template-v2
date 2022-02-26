@@ -8,6 +8,7 @@ import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
 import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
 import { MenuDrawer } from "./drawer/Drawer";
+import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
@@ -24,7 +25,7 @@ export const Navbar: FC = () => {
                 <Flex justifyContent="space-between" alignItems="center">
                     <LogoType text={configs.common.logoType} />
                     <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
-                        <HStack spacing="8">
+                        <HStack spacing="8" mr="6">
                             <Button
                                 variant="link"
                                 color={navItemColor}
@@ -53,9 +54,14 @@ export const Navbar: FC = () => {
                                 Resume
                             </Button>
                         </HStack>
+                        <ColorModeButton />
                     </Flex>
 
-                    <MenuDrawer display={{ base: "block", md: "none" }} />
+                    <MenuDrawer
+                        currentPage={currentPage}
+                        onSectionClick={toSection}
+                        display={{ base: "block", md: "none" }}
+                    />
                 </Flex>
             </Container>
         </Box>

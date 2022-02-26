@@ -25,6 +25,8 @@ export const ColorModeButton: FC<StyleProps> = (props) => {
                     window.scrollBy(0, 1);
                     window.scrollBy(0, -1);
                 }}
+                w="32px"
+                h="32px"
             />
         </HStack>
     );

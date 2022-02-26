@@ -5,7 +5,7 @@ name: Deploy to Firebase Hosting on Prod
       - main
 jobs:
   build_and_deploy:
-    if: ${{ github.repository }} == 'hrishikeshpaul/portfolio'
+    if: ${{ github.repository }} == ${{ secrets.GITHUB_REPO_NAME }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,13 +24,4 @@ jobs:
       - name: Deploy to Firebase Hosting
         run: |
           npm install -g firebase-tools
-          firebase deploy --only hosting:prod --project=iampaul --token=${{ secrets.FIREBASE_TOKEN }} --non-interactive
-
-      # - name: Deploy to firebase hosting
-      #   uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      #     firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IAMPAUL }}'
-      #     channelId: live
-      #     projectId: iampaul
-      #     target: prod
+          firebase deploy --only hosting:prod --project=${{ secrets.FIREBASE_PROJECT_NAME }} --token=${{ secrets.FIREBASE_TOKEN }} --non-interactive

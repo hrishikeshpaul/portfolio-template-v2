@@ -45,7 +45,7 @@ const ButtonStyles: ComponentStyleConfig = {
                 },
                 _active: {
                     background: "transparent",
-                }
+                },
             };
         },
     },
@@ -55,11 +55,17 @@ const ButtonStyles: ComponentStyleConfig = {
 };
 
 const LinkStyles: ComponentStyleConfig = {
-    baseStyle: {
-        fontWeight: 700,
-        color: 'primary.600',
-    }
-}
+    baseStyle: (props) => {
+        let color = "primary.600";
+
+        if (props.colorMode === "dark") color = "primary.100";
+
+        return {
+            fontWeight: 700,
+            color,
+        };
+    },
+};
 
 export const components = {
     Text: { ...TextStyles },

@@ -32,7 +32,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
             {configs.common.socials.map(
                 (social, idx) =>
                     !exclude?.includes(social.type) && (
-                        <Tooltip label={social.type} textTransform="capitalize">
+                        <Tooltip key={social.type} label={social.type} textTransform="capitalize">
                             <Button
                                 p="0"
                                 aria-label={`${social.type}-button`}
@@ -40,7 +40,6 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                                 variant="icon"
                                 data-aos="fade"
                                 data-aos-delay={idx * 100 + delay}
-                                key={social.type}
                                 fontSize={social.type === "mail" ? "24pt" : "20pt"}
                                 icon={LinksToIconMapper[social.type]}
                                 onClick={() => open(social.link)}

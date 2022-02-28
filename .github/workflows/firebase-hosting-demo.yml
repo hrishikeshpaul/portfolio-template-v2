@@ -26,14 +26,6 @@ jobs:
           echo ${{ secrets.FIREBASE_JSON }} | base64 -d >> firebase.json
           echo ${{ secrets.FIREBASERC }} | base64 -d >> .firebaserc
 
-      # - name: Deploy to firebase hosting
-      #   uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      #     firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HPAUL_V2 }}'
-      #     channelId: live
-      #     projectId: hpaul-v2
-      #     target: demo
       - name: Deploy to Firebase Hosting
         run: |
           npm install -g firebase-tools

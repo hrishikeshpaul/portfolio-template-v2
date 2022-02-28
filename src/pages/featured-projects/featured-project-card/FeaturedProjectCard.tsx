@@ -100,9 +100,11 @@ export const FeaturedProjectCard: FC<Props> = ({
                         data-aos-offset="200"
                         data-aos-delay="200"
                         borderRadius="xl"
+                        pb="2"
                     >
                         {description}
                     </Text>
+
                     <Tags tags={tags} id={id} />
                 </Box>
 

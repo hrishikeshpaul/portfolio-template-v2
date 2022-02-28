@@ -37,7 +37,7 @@ export const OtherProjectCard: FC<Props> = ({ id, title, demo, github, tags, des
                     <Heading fontSize="2xl" data-aos="fade-down" data-aos-offset="200">
                         {title}
                     </Heading>
-                    <Text pt="2" data-aos="fade" data-aos-delay="200" data-aos-offset="200">
+                    <Text py="2" data-aos="fade" data-aos-delay="200" data-aos-offset="200">
                         {description}
                     </Text>
                     <Tags tags={tags} id={id} size="xs" />

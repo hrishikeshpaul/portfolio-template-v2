@@ -11,6 +11,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [Connect](#connect)
 - [License](#license)
@@ -18,10 +19,6 @@
 ---
 
 ## Installation
-
-### Dependencies
-- npm
-- git
 
 ### Setup 
 
@@ -53,12 +50,12 @@ $ yarn build
 
 All the information can be edited in the JSONs and Markdowns in the [content folder](https://github.com/hrishikeshpaul/portfolio-template-v2/tree/main/src/content). Each section of the portfolio has its own folder. The `common.json` file contains details that are used throughout the website. 
 
+
 ## Contributing 
 
 - Clone this repo to your local machine.
 - Checkout to a new branch. Give it a relevant name!
 - Create a pull request
-
 
 
 ## Connect

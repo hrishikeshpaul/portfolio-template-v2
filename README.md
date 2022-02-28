@@ -1,5 +1,5 @@
 # Portfolio Template 🖐
-> This is a simple, minimal and responsive personal website template, built using React, TypeScript, HTML and SCSS.
+> Version 2 of a simple, minimal and responsive personal website template, built using React, TypeScript, HTML and SCSS.
 
 ![Portfolio Template Banner](public/assets/readme/banner.png)
 
@@ -11,7 +11,6 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [Connect](#connect)
 - [License](#license)
@@ -50,17 +49,13 @@ $ yarn build
 
 All the information can be edited in the JSONs and Markdowns in the [content folder](https://github.com/hrishikeshpaul/portfolio-template-v2/tree/main/src/content). Each section of the portfolio has its own folder. The `common.json` file contains details that are used throughout the website. 
 
-
 ## Contributing 
 
 - Clone this repo to your local machine.
 - Checkout to a new branch. Give it a relevant name!
 - Create a pull request
 
-
 ## Connect
-
-Reach out to me at one of the following places!
 
 - Website at <a href="https://hrishikeshpaul.github.io/" target="_blank">`https://hrishikeshpaul.github.io/`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/hrishikeshpaul/" target="_blank">`hrishikeshpaul`</a>

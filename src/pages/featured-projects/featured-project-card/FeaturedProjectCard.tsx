@@ -56,7 +56,7 @@ export const FeaturedProjectCard: FC<Props> = ({
         <Flex
             justifyContent="space-between"
             id="featured-project-card"
-            py={{ base: "12", md: "28" }}
+            py={{ base: "12", md: "12", lg: '28' }}
             direction={{ base: "column-reverse", lg: ImagePositionLayoutMapper[imagePosition] }}
         >
             <Flex

@@ -9,9 +9,9 @@ export const FeaturedProjects: FC = () => {
     return (
         <Box
             id="featured-projects"
-            display={{ base: "block", md: "grid", lg: "block" }}
-            gridTemplateColumns="repeat(2, 1fr)"
-            gap="10"
+            display={{ base: "block", md: "flex", lg: "block" }}
+            flexDir="column"
+            gap={{ base: "2", md: "1" }}
         >
             {configs.featuredProjects.map((project, idx) => (
                 <FeaturedProjectCard

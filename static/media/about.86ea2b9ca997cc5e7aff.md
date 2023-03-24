@@ -1,5 +1,0 @@
-I am a budding Data Analyst from Eau Claire, Wisconsin looking to exert myself into a fully-driven career one data project at a time.
-
-My love for exploring, analyzing, and interpreting data led me to pursue a career as a Data Analyst. I am highly proficient in **MySQL**, a beginner in **JavaScript**, and **Python**, and can seamlessly plug into **PowerBI** and **Microsoft Report Builder** that can drive informed decision-making and provide real-time insights. 
-
-When I'm not deeply immersed in data, I enjoy engaging in activities that provide me with a sense of balance and perspective, such as collecting vinyl records and going for jogs. These activities not only help me maintain my mental and physical well-being but also enhance my analytical abilities. I am always looking for new challenges to learn and grow both personally and professionally, whether it's discovering rare vinyl gems or conquering new running trails. With a strong commitment to excellence and a passion for data, I am excited to apply my skills to projects that have a real-world impact.

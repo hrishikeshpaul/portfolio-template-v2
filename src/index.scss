@@ -1,0 +1,34 @@
+@import "src/theme/fonts/font.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  cursor: url(./utils/assets/cursor.svg) 20 20, auto !important;
+
+  *::selection {
+    background: var(--hp-colors-orange-200);
+    transition: all 0.25s ease-in-out !important;
+  }
+}
+
+.autograph__path {
+  opacity: 0;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  .animated & {
+    opacity: 1;
+    animation-name: line;
+  }
+}
+
+@keyframes line {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

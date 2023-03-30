@@ -1,0 +1,64 @@
+[
+    {
+        "id": "other-project-post",
+        "title": "Part of Speech Tagger",
+        "year": "Aug 2019 - Dec 2019",
+        "github": "https://github.com/hrishikeshpaul/post",
+        "demo": "https://hrishikeshpaul.github.io/post/",
+        "tags": ["Python", "Vue", "Flask", "Artificial Intelligence", "Language Processing"],
+        "description": "Post is a simple algorithm that was developed to tag a word in a sentence corresponding to its part of speech. The algorithm makes of a probabilistic approach along with some randomness, together which forms the basis of an algorithm called Gibbs Sampling.",
+        "image": "/assets/other-projects/post.webp",
+        "jpg": "/assets/other-projects/post.jpeg"
+
+    },
+    {
+        "id": "other-project-noq",
+        "title": "NoQ Job Portal",
+        "year": "Aug 2019 - Dec 2019",
+        "github": "https://github.com/hrishikeshpaul/noq",
+        "demo": "http://noq-client.herokuapp.com/login",
+        "tags": ["Vue", "NodeJS", "JavaScript", "MongoDB", "Heroku", "Agile", "Sockets", "JIRA"],
+        "description": "NoQ is a tool which allows for both employers and students to skip the hassle seen in modern day career fairs, while effectively pairing up students with employees based on various factors.",
+        "readMore": "https://hrishikeshpaul.medium.com/noq-a-job-portal-for-college-career-fairs-9996bbb37a1c",
+        "image": "/assets/other-projects/noq.webp",
+        "jpg": "/assets/other-projects/noq.jpeg"
+    },
+    {
+        "id": "other-project-bank-compare",
+        "title": "Experience Design Anaysis",
+        "year": "Aug 2019 - Dec 2019",
+        "tags": ["UX Design", "Analysis", "Adobe XD", "Mockups"],
+        "description": "This project demonstrates how the selection of colors, fonts, shapes, languages, layout and other styles can lead to drastically different user experiences, by comparing landing pages of 3 bank websites built from scratch.",
+        "readMore": "https://drive.google.com/file/d/1GY2WmRZgvBgFx6OlAMcAj8_DQVmS5VBw/view",
+        "image": "/assets/other-projects/bank.webp",
+        "jpg": "/assets/other-projects/bank.jpeg"
+    },
+    {
+        "id": "other-project-bunder",
+        "title": "Bunder",
+        "year": "Jan 2020 - Apr 2020",
+        "tags": ["Surveying", "User Interviews", "Ideation", "Analysis", "Product Planning"],
+        "description": "An MVP Proposal - Bunder is an intuitive web platform for micro-communities to share sensitive data with privacy within the community and allow engagement amongst them.",
+        "readMore": "https://drive.google.com/file/d/1sj9wL7uEokNpk6VUu3nsiPHf3TZeu4lT/view?usp=sharing",
+        "image": "/assets/other-projects/bunder.webp",
+        "jpg": "/assets/other-projects/bunder.jpeg"
+    },
+    {
+        "id": "other-project-suicide-analyzer",
+        "title": "Suicide Analyzer",
+        "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
+        "description": "This is a web application, uses a map to demonstrate the number suicides committed around the globe, according to a dataset provided by the WHO.",
+        "github": "https://github.com/hrishikeshpaul/whodata",
+        "image": "/assets/other-projects/suicide-analyzer.webp",
+        "jpg": "/assets/other-projects/suicide-analyzer.jpeg"
+    },
+    {
+        "id": "other-project-nutricare",
+        "title": "Nutricare",
+        "tags": ["AngularJS", "JavaScript", "Express", "NodeJS", "Leaflet", "Heroku", "Python", "Pandas"],
+        "description": "A web app for patients to input nutrient intake data and researchers to analyse the data with the help of graphs and tables. A researcher can conduct studies on N different subjects for a particular problem statement.",
+        "readMore": "https://angel.co/projects/576300-nutricare",
+        "image": "/assets/other-projects/nutricare.webp",
+        "jpg": "/assets/other-projects/nutricare.jpeg"
+    }
+]

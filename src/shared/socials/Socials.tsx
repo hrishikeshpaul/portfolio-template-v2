@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Button, HStack, IconButton, Tooltip } from "@chakra-ui/react";
 
-import { configs } from "shared/content/Content";
+import {useTranslation} from "react-i18next";
 import { onResumeOpen, open } from "utils/Functions";
 import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, YoutubeIcon } from "utils/Icons";
 
@@ -21,7 +21,15 @@ interface Props {
     delay?: number;
 }
 
+interface SocialProps {
+    type: string;
+    link: string;
+}
+
 export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
+    const {t} = useTranslation('common');
+    const socials = t('socials', { returnObjects: true}) as Array<SocialProps>;
+
     return (
         <HStack spacing="5">
             {resume && (
@@ -29,7 +37,7 @@ export const Socials: FC<Props> = ({ resume = true, exclude, delay = 800 }) => {
                     Resume
                 </Button>
             )}
-            {configs.common.socials.map(
+            {socials.map(
                 (social, idx) =>
                     !exclude?.includes(social.type) && (
                         <Tooltip key={social.type} label={social.type} textTransform="capitalize">

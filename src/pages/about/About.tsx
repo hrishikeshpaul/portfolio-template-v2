@@ -2,18 +2,19 @@ import { FC } from "react";
 
 import { Box, Flex, Heading, Text, Image, Button, IconButton } from "@chakra-ui/react";
 
-import { configs, Content, MarkdownFile, useContent } from "shared/content/Content";
+import { Content } from "shared/content/Content";
 import { Blog } from "pages/about/blog/Blog";
 import { Education } from "pages/about/education/Education";
 import { Experience } from "pages/about/experience/Experience";
 import { Skills } from "pages/about/skills/Skills";
 import { VolumeIcon } from "utils/Icons";
+import {useTranslation} from "react-i18next";
 
 export const About: FC = () => {
-    const content = useContent(MarkdownFile.About);
+    const {t} = useTranslation(['common', 'aboutmd']);
 
     const onPlay = () => {
-        const audio = new Audio(configs.common.audioFile);
+        const audio = new Audio(t("audioFile", {ns: ['common']}));
         audio.play();
     };
 
@@ -22,32 +23,32 @@ export const About: FC = () => {
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
                 <Box flex="0.35" data-aos="fade-up">
                     <picture>
-                        <source type="image/webp" srcSet={configs.common.mainPicture}></source>
-                        <source type="image/jpeg" srcSet={configs.common.mainPictureJPG}></source>
-                        <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" alt="profile image" />
+                        <source type="image/webp" srcSet={t("mainPicture", {ns: ['common']})}></source>
+                        <source type="image/jpeg" srcSet={t("mainPictureJPG", {ns: ['common']})}></source>
+                        <Image borderRadius="xl" src={t("mainPicture", {ns: ['common']})} w="100%" alt="profile image" />
                     </picture>
                 </Box>
                 <Box flex="0.85">
-                    <Heading data-aos="fade-down">{configs.common.name}</Heading>
-                    <Flex alignItems="center">
-                        <Text fontWeight="bold" opacity="0.5" data-aos="fade" data-aos-delay="200">
-                            {configs.common.pronunciation}
-                        </Text>
+                    <Heading data-aos="fade-down">{t("name", {ns: ['common']})}</Heading>
+                    {/*<Flex alignItems="center">*/}
+                    {/*    <Text fontWeight="bold" opacity="0.5" data-aos="fade" data-aos-delay="200">*/}
+                    {/*        {t("pronunciation", {ns: ['common']})}*/}
+                    {/*    </Text>*/}
 
-                        <Button
-                            size="xs"
-                            aria-label="pronunciation button"
-                            as={IconButton}
-                            variant="icon"
-                            fontSize="md"
-                            icon={<VolumeIcon />}
-                            onClick={onPlay}
-                            data-aos="fade"
-                            data-aos-delay="400"
-                        />
-                    </Flex>
+                    {/*    <Button*/}
+                    {/*        size="xs"*/}
+                    {/*        aria-label="pronunciation button"*/}
+                    {/*        as={IconButton}*/}
+                    {/*        variant="icon"*/}
+                    {/*        fontSize="md"*/}
+                    {/*        icon={<VolumeIcon />}*/}
+                    {/*        onClick={onPlay}*/}
+                    {/*        data-aos="fade"*/}
+                    {/*        data-aos-delay="400"*/}
+                    {/*    />*/}
+                    {/*</Flex>*/}
                     <Box pt="4" data-aos="fade-up" data-aos-delay="400">
-                        <Content fontSize="lg">{content.about}</Content>
+                        <Content fontSize="lg">{t("content", {ns: "aboutmd"})}</Content>
                     </Box>
                 </Box>
             </Flex>

@@ -1,5 +1,5 @@
-[
-    {
+{"projects": [
+        {
         "id": "other-project-post",
         "title": "Part of Speech Tagger",
         "year": "Aug 2019 - Dec 2019",
@@ -61,4 +61,5 @@
         "image": "/assets/other-projects/nutricare.webp",
         "jpg": "/assets/other-projects/nutricare.jpeg"
     }
-]
+    ]
+}

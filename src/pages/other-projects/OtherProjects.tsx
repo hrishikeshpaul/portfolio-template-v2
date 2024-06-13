@@ -1,19 +1,33 @@
 import { FC, useState } from "react";
 
 import { Box, Button, Flex } from "@chakra-ui/react";
-import { configs } from "shared/content/Content";
+import {useTranslation} from "react-i18next";
 import { OtherProjectCard } from "pages/other-projects/other-project-card/OtherProjectCard";
 import { ChevronDownIcon, ChevronUpIcon } from "utils/Icons";
 
 const initialCount = 3;
 const incrementor = 3;
 
+interface OtherProjectProps {
+    id: string;
+    title: string;
+    year: string;
+    github: string;
+    demo: string;
+    tags: Array<string>;
+    description: string;
+    image: string;
+    jpg: string;
+}
+
 export const OtherProjects: FC = () => {
     const [count, setCount] = useState<number>(initialCount);
+    const {t} = useTranslation('other-projects');
+    const otherProjects = t('projects', { returnObjects: true}) as Array<OtherProjectProps>;
 
     const scrollToElement = (idx: number) => {
         const elementTop = document
-            .getElementById(`other-project-card-${configs.otherProjects[idx].id}`)
+            .getElementById(`other-project-card-${otherProjects[idx].id}`)
             ?.getBoundingClientRect().top;
 
         if (elementTop) {
@@ -36,11 +50,11 @@ export const OtherProjects: FC = () => {
 
     return (
         <Box>
-            {configs.otherProjects.map((project, idx) => (
+            {otherProjects.map((project, idx) => (
                 <div key={project.id}>{idx < count && <OtherProjectCard key={project.id} {...project} />}</div>
             ))}
-            <Flex justifyContent="center" py="8" display={configs.otherProjects.length > 3 ? "flex" : "none"}>
-                {count < configs.otherProjects.length ? (
+            <Flex justifyContent="center" py="8" display={otherProjects.length > 3 ? "flex" : "none"}>
+                {count < otherProjects.length ? (
                     <Button rightIcon={<ChevronDownIcon />} variant="link" onClick={onShowMore}>
                         Show More
                     </Button>

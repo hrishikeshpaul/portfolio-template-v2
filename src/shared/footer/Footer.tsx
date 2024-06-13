@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Box, Heading, Flex, Text } from "@chakra-ui/react";
 
-import { configs } from "shared/content/Content";
+import {useTranslation} from "react-i18next";
 import { PageHeader } from "shared/page-header/PageHeader";
 import { onMailTo } from "utils/Functions";
 import { Socials } from "shared/socials/Socials";
@@ -17,12 +17,14 @@ const headerStyles = {
 };
 
 export const Footer: FC = () => {
+    const {t} = useTranslation('common');
+
     return (
         <>
             <PageHeader label="SAY HI" />
             <Flex pb="2" gap="3" overflow="hidden" alignItems="center">
                 <Heading {...headerStyles} onClick={onMailTo} fontSize="2xl">
-                    {configs.common.email}
+                    {t('email')}
                 </Heading>
             </Flex>
             <Text>

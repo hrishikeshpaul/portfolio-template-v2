@@ -2,18 +2,20 @@ import { FC } from "react";
 
 import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 
-import { configs } from "shared/content/Content";
+import {useTranslation} from "react-i18next";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
 import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
 import { MenuDrawer } from "./drawer/Drawer";
 import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
+import {LanguageSelect} from "shared/language-select/LanguageSelect"
 
 export const Navbar: FC = () => {
     const bg = useColorModeValue(bgLight, bgDark);
     const navItemColor = useColorModeValue("gray.800", "white");
     const currentPage = useScroll();
+    const {t} = useTranslation('common')
 
     const toSection = (section: string) => {
         document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +25,7 @@ export const Navbar: FC = () => {
         <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
             <Container py="4" px="4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
                 <Flex justifyContent="space-between" alignItems="center">
-                    <LogoType text={configs.common.logoType} />
+                    <LogoType text={t('logoType',  { returnObjects: true })} />
                     <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
                         <HStack spacing="8" mr="6">
                             <Button
@@ -54,6 +56,7 @@ export const Navbar: FC = () => {
                                 Resume
                             </Button>
                         </HStack>
+                        <LanguageSelect />
                         <ColorModeButton />
                     </Flex>
 
